@@ -1,0 +1,170 @@
+/* ✅ 設定整體背景 */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f5e6cc; /* 淺米色背景 */
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ✅ 讓左右容器更靠近 */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 50px; /* ✅ 調整間距 */
+  height: 90vh;
+  padding: 20px;
+}
+
+/* ✅ 左側: 角色資訊 */
+.info-container {
+  flex: 1;
+  max-width: 600px; /* ✅ 增加寬度 */
+  padding: 40px; /* ✅ 增加內距 */
+  background: #fffaf0;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(90, 74, 66, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ✅ 讓內容置中 */
+}
+
+/* ✅ 右側: Avatar 上傳區域 */
+.avatar-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ 右側 Avatar 容器 */
+.avatar-container {
+  width: 300px; /* ✅ 設定固定寬度 */
+  min-height: 600px; /* ✅ 增加高度，確保與左側對齊 */
+  padding: 30px;
+  background: #e5c8a6;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(90, 74, 66, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* ✅ 標題樣式 */
+h1 {
+  font-size: 32px; /* ✅ 增大字體 */
+  font-weight: bold;
+  color: #5a4a42;
+  margin-bottom: 30px; /* ✅ 增加底部間距 */
+  text-align: center;
+}
+
+/* ✅ 头像上传框 */
+.avatar-box {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: #d4b18f;
+  border: 3px dashed #a3826c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* ✅ 讓 "Upload Image" 文字置中 */
+.avatar-box span {
+  position: absolute;
+  color: #5a4a42;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* ✅ 隱藏 input file */
+.avatar-box input {
+  display: none;
+}
+
+/* ✅ 當有圖片時，隱藏 "Upload Image" 文字 */
+.avatar-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-box img + span {
+  display: none;
+}
+
+/* ✅ Increase textarea size & readability */
+textarea {
+  width: 100%;
+  max-width: 400px;
+  min-height: 80px; /* Increased height */
+  padding: 14px; /* More padding for better spacing */
+  font-size: 16px; /* Readable font size */
+  line-height: 1.5; /* Improve line spacing */
+  background: #f2e4d5;
+  color: #5a4a42;
+  border: 1px solid #c2a98f;
+  border-radius: 5px;
+  resize: vertical; /* Allow manual resizing */
+}
+
+/* ✅ Improve example text spacing */
+.example-text {
+  font-size: 14px;
+  color: #8a6d5e;
+  margin-top: 5px;
+  margin-bottom: 15px; /* Add more space below example text */
+  text-align: left;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* ✅ Ensure uniform spacing for inputs */
+input, textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 14px;
+  margin: 10px 0; /* Ensure proper spacing */
+  font-size: 16px;
+  border-radius: 5px;
+  text-align: left; /* Align text to left for better readability */
+}
+
+/* ✅ Prevent textarea text from being squeezed */
+textarea::placeholder {
+  opacity: 0.6;
+  font-style: italic;
+}
+
+
+/* ✅ 按鈕 */
+button {
+  background: #d5a67e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 14px;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  font-size: 18px;
+}
+
+button:hover {
+  background: #b88665;
+}
