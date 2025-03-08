@@ -74,7 +74,7 @@ export default function Home() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ character }),
     });
-
+  
     const result = await response.json();
     alert(result.message);
     setLoading(false);
