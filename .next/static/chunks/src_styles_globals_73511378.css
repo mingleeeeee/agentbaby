@@ -1,40 +1,37 @@
-/* ✅ 設定整體背景 */
+/* [project]/src/styles/globals.css [client] (css) */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #f5e6cc; /* 淺米色背景 */
+  background-color: #f5e6cc;
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* ✅ 讓左右容器更靠近 */
 .main-container {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  gap: 50px; /* ✅ 調整間距 */
+  gap: 50px;
   height: 90vh;
   padding: 20px;
 }
 
-/* ✅ 左側: 角色資訊 */
 .info-container {
   flex: 1;
-  max-width: 600px; /* ✅ 增加寬度 */
-  padding: 40px; /* ✅ 增加內距 */
+  max-width: 600px;
+  padding: 40px;
   background: #fffaf0;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(90, 74, 66, 0.2);
+  box-shadow: 0 0 10px #5a4a4233;
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center; /* ✅ 讓內容置中 */
+  align-items: center;
 }
 
-/* ✅ 右側: Avatar 上傳區域 */
 .avatar-wrapper {
   flex: 1;
   display: flex;
@@ -42,30 +39,27 @@ html, body {
   justify-content: center;
 }
 
-/* ✅ 右側 Avatar 容器 */
 .avatar-container {
-  width: 300px; /* ✅ 設定固定寬度 */
-  min-height: 600px; /* ✅ 增加高度，確保與左側對齊 */
+  width: 300px;
+  min-height: 600px;
   padding: 30px;
   background: #e5c8a6;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(90, 74, 66, 0.2);
+  box-shadow: 0 0 10px #5a4a4233;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
 }
 
-/* ✅ 標題樣式 */
 h1 {
-  font-size: 32px; /* ✅ 增大字體 */
+  font-size: 32px;
   font-weight: bold;
   color: #5a4a42;
-  margin-bottom: 30px; /* ✅ 增加底部間距 */
+  margin-bottom: 30px;
   text-align: center;
 }
 
-/* ✅ 头像上传框 */
 .avatar-box {
   width: 180px;
   height: 180px;
@@ -81,22 +75,19 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* ✅ 讓 "Upload Image" 文字置中 */
 .avatar-box span {
   position: absolute;
   color: #5a4a42;
   font-size: 14px;
   font-weight: bold;
   text-align: center;
-  opacity: 0.7;
+  opacity: .7;
 }
 
-/* ✅ 隱藏 input file */
 .avatar-box input {
   display: none;
 }
 
-/* ✅ 當有圖片時，隱藏 "Upload Image" 文字 */
 .avatar-box img {
   width: 100%;
   height: 100%;
@@ -107,54 +98,48 @@ h1 {
   display: none;
 }
 
-/* ✅ Increase textarea size & readability */
 textarea {
   width: 100%;
   max-width: 400px;
-  min-height: 80px; /* Increased height */
-  padding: 14px; /* More padding for better spacing */
-  font-size: 16px; /* Readable font size */
-  line-height: 1.5; /* Improve line spacing */
+  min-height: 80px;
+  padding: 14px;
+  font-size: 16px;
+  line-height: 1.5;
   background: #f2e4d5;
   color: #5a4a42;
   border: 1px solid #c2a98f;
   border-radius: 5px;
-  resize: vertical; /* Allow manual resizing */
+  resize: vertical;
 }
 
-/* ✅ Improve example text spacing */
 .example-text {
   font-size: 14px;
   color: #8a6d5e;
   margin-top: 5px;
-  margin-bottom: 15px; /* Add more space below example text */
+  margin-bottom: 15px;
   text-align: left;
   width: 100%;
   max-width: 400px;
 }
 
-/* ✅ Ensure uniform spacing for inputs */
 input, textarea {
   width: 100%;
   max-width: 400px;
   padding: 14px;
-  margin: 10px 0; /* Ensure proper spacing */
+  margin: 10px 0;
   font-size: 16px;
   border-radius: 5px;
-  text-align: left; /* Align text to left for better readability */
+  text-align: left;
 }
 
-/* ✅ Prevent textarea text from being squeezed */
 textarea::placeholder {
-  opacity: 0.6;
+  opacity: .6;
   font-style: italic;
 }
 
-
-/* ✅ 按鈕 */
 button {
   background: #d5a67e;
-  color: white;
+  color: #fff;
   border: none;
   cursor: pointer;
   font-weight: bold;
@@ -169,17 +154,16 @@ button:hover {
   background: #b88665;
 }
 
-/* ✅ AI 卡片統一風格 */
 .ai-card {
   padding: 24px;
   border-radius: 16px;
-  background: #fffaf0; /* 淡米色 */
+  background: #fffaf0;
   width: 100%;
   max-width: 400px;
-  box-shadow: 0 4px 8px rgba(90, 74, 66, 0.2); /* 柔和陰影 */
+  box-shadow: 0 4px 8px #5a4a4233;
   margin: 20px auto;
-  font-family: 'Arial', sans-serif;
-  color: #5a4a42; /* 主色一致 */
+  font-family: Arial, sans-serif;
+  color: #5a4a42;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -187,7 +171,6 @@ button:hover {
   box-sizing: border-box;
 }
 
-/* ✅ 開發者行 */
 .developer {
   display: flex;
   align-items: center;
@@ -198,7 +181,6 @@ button:hover {
   justify-content: space-between;
 }
 
-/* ✅ 開發者地址 */
 .developer-address {
   display: flex;
   align-items: center;
@@ -212,10 +194,9 @@ button:hover {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 2px solid #d4b18f; /* 柔和外框 */
+  border: 2px solid #d4b18f;
 }
 
-/* ✅ 分隔線 */
 .divider {
   width: 100%;
   height: 1px;
@@ -224,7 +205,6 @@ button:hover {
   margin: 8px 0;
 }
 
-/* ✅ 名稱 */
 .ai-name {
   font-size: 24px;
   font-weight: 800;
@@ -233,7 +213,6 @@ button:hover {
   word-break: break-word;
 }
 
-/* ✅ 地址 */
 .ai-address {
   font-family: monospace;
   color: #8a6d5e;
@@ -241,7 +220,6 @@ button:hover {
   word-break: break-word;
 }
 
-/* ✅ 區塊 */
 .description, .price {
   display: flex;
   gap: 5px;
@@ -249,29 +227,25 @@ button:hover {
   font-size: 16px;
 }
 
-/* ✅ 標籤 */
 .label {
-  color: #3a5f47; /* 深一點的綠 */
+  color: #3a5f47;
   font-weight: bold;
 }
 
-/* ✅ 描述 */
 .desc-text {
   color: #5a4a42;
   font-weight: normal;
 }
 
-/* ✅ 價格 */
 .price-value {
   font-weight: bold;
-  color: #c24c4c; /* 柔和紅 */
+  color: #c24c4c;
   font-size: 18px;
 }
 
-/* ✅ Metamask Connect Button */
 .connect-wallet-btn {
-  background: #f2e4d5; /* 和 input 相同色 */
-  color: #5a4a42; /* 主色 */
+  background: #f2e4d5;
+  color: #5a4a42;
   border: 2px solid #c2a98f;
   border-radius: 8px;
   padding: 12px 20px;
@@ -282,16 +256,15 @@ button:hover {
   width: 100%;
   max-width: 400px;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(90, 74, 66, 0.2);
-  transition: background 0.3s, color 0.3s;
+  box-shadow: 0 2px 4px #5a4a4233;
+  transition: background .3s, color .3s;
 }
 
 .connect-wallet-btn:hover {
-  background: #d4b18f; /* Hover 焦糖 */
-  color: white;
+  background: #d4b18f;
+  color: #fff;
 }
 
-/* ✅ Swap 內容延續 ai-card */
 .swap-title {
   font-size: 24px;
   color: #5a4a42;
@@ -299,7 +272,6 @@ button:hover {
   font-weight: bold;
 }
 
-/* ✅ Buy / Sell 按鈕組 */
 .swap-options {
   display: flex;
   justify-content: space-between;
@@ -315,21 +287,19 @@ button:hover {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  background: #d4b18f; /* 焦糖色 */
-  color: white;
-  transition: background 0.2s ease;
+  background: #d4b18f;
+  color: #fff;
+  transition: background .2s;
 }
 
 .swap-btn.active {
-  background: #a3826c; /* 深焦糖 */
+  background: #a3826c;
 }
 
 .swap-btn.active:hover {
-  background: #b88665; /* 深焦糖 */
+  background: #b88665;
 }
 
-
-/* ✅ Swap 手續費顯示 */
 .swap-info {
   display: flex;
   justify-content: flex-end;
@@ -345,7 +315,6 @@ button:hover {
   font-weight: bold;
 }
 
-/* ✅ Swap 輸入框 */
 .swap-input-wrapper {
   display: flex;
   align-items: center;
@@ -362,7 +331,7 @@ button:hover {
   border: none;
   flex: 1;
   font-size: 18px;
-  background: transparent;
+  background: none;
   color: #5a4a42;
   text-align: left;
 }
@@ -377,10 +346,9 @@ button:hover {
   margin-left: 10px;
 }
 
-/* ✅ Connect Wallet 按鈕，統一顏色 */
 .connect-wallet-btn {
-  background: #d5a67e; /* 焦糖色 */
-  color: white;
+  background: #d5a67e;
+  color: #fff;
   padding: 14px;
   border-radius: 24px;
   border: none;
@@ -388,9 +356,11 @@ button:hover {
   font-weight: bold;
   cursor: pointer;
   width: 100%;
-  transition: background 0.2s ease;
+  transition: background .2s;
 }
 
 .connect-wallet-btn:hover {
-  background: #b88665; /* 深一點 */
+  background: #b88665;
 }
+
+/*# sourceMappingURL=src_styles_globals_73511378.css.map*/

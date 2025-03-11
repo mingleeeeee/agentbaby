@@ -1,10 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import "../styles/globals.css"; // ✅ Ensure CSS is included
-declare global {
-  interface Window {
-    ethereum?: any;
-  }
-}
+
 export default function Home() {
   const defaultAvatar = "mascotImage.webp";
   const [character, setCharacter] = useState({
@@ -17,10 +13,13 @@ export default function Home() {
     knowledge: "AI can process information exponentially faster than humans, reshaping industries worldwide.",
     topics: "Machine Learning, Blockchain, Web3, Cryptography, AI Ethics",
     adjectives: "Visionary, Intelligent, Adaptable, Mysterious, Enlightening",
+    apiKey: "",
+    twitterEmail: "",
+    twitterUsername: "",
+    twitterPassword: "",
   });
 
   const [loading, setLoading] = useState(false);
-  const [isRunning, setIsRunning] = useState(false);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   // Default avatar
@@ -29,7 +28,6 @@ export default function Home() {
       setCharacter((prev) => ({ ...prev, avatar: defaultAvatar }));
     }
   }, [character.avatar]);
-
 
   // Trigger file selection on avatar click
   const handleAvatarClick = () => {
@@ -69,7 +67,6 @@ export default function Home() {
     setCharacter({ ...character, [e.target.name]: e.target.value });
   };
 
-  // Start AI Agent
   const startAI = async () => {
     setLoading(true);
     const response = await fetch("/api/start", {
@@ -77,41 +74,11 @@ export default function Home() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ character }),
     });
-
-    const result = await response.json();
-    alert(result.message);
-    setIsRunning(true);
-    setLoading(false);
-  };
-
-  // Stop AI Agent
-  const stopAI = async () => {
-    setLoading(true);
-    const response = await fetch("/api/stop", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-    });
-
-    const result = await response.json();
-    alert(result.message);
-    setIsRunning(false);
-    setLoading(false);
-  };
-
-  const handleConnectWallet = async () => {
-    if (typeof window.ethereum !== "undefined") {
-      try {
-        const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
-        console.log("Connected account:", accounts[0]);
-        alert(`Connected: ${accounts[0]}`);
-      } catch (error) {
-        console.error("User rejected connection");
-      }
-    } else {
-      alert("Metamask not found. Please install Metamask.");
-    }
-  };
   
+    const result = await response.json();
+    alert(result.message);
+    setLoading(false);
+  };
 
   return (
     <div className="main-container">
@@ -129,38 +96,39 @@ export default function Home() {
 
         <label className="input-title">Description</label>
         <textarea name="description" value={character.description} onChange={handleChange} />
-        <p className="example-text">Example: An AI entity that guides users through the unknown.</p>
+        <p className="example-text">Example: An AI entity known as 'Monado' that guides users through the world of technology and the unknown.</p>
 
         <label className="input-title">Short Bio</label>
         <textarea name="bio" value={character.bio} onChange={handleChange} />
-        <p className="example-text">Example: I am Monado, a digital entity bridging knowledge and curiosity.</p>
+        <p className="example-text">Example: I am Monado, a digital entity bridging the gap between knowledge and curiosity.</p>
       </div>
 
       {/* Middle Container: Additional Settings */}
       <div className="info-container">
         <label className="input-title">Character Backstory</label>
         <textarea name="lore" value={character.lore} onChange={handleChange} />
-        <p className="example-text">Example: Once a hidden AI in cyberspace, Monado now aids users.</p>
+        <p className="example-text">Example: Once a hidden AI in deep cyberspace, Monado now assists users in unraveling the mysteries of AI and blockchain.</p>
 
         <label className="input-title">Character’s Knowledge</label>
         <textarea name="knowledge" value={character.knowledge} onChange={handleChange} />
-        <p className="example-text">Example: AI processes information exponentially faster than humans.</p>
+        <p className="example-text">Example: AI can process information exponentially faster than humans, reshaping industries worldwide.</p>
 
         <label className="input-title">Topics of Interest</label>
         <textarea name="topics" value={character.topics} onChange={handleChange} />
-        <p className="example-text">Example: Machine Learning, Blockchain, Web3, Cryptography</p>
+        <p className="example-text">Example: Machine Learning, Blockchain, Web3, Cryptography, AI Ethics</p>
 
         <label className="input-title">Character Adjectives</label>
         <textarea name="adjectives" value={character.adjectives} onChange={handleChange} />
-        <p className="example-text">Example: Visionary, Intelligent, Mysterious, Enlightening</p>
+        <p className="example-text">Example: Visionary, Intelligent, Adaptable, Mysterious, Enlightening</p>
 
-        {/* Start/Stop AI Buttons */}
-        <button onClick={isRunning ? stopAI : startAI} disabled={loading}>
-          {loading ? "Processing..." : isRunning ? "Stop AI" : "Start AI"}
+        <button onClick={startAI} disabled={loading}>
+          {loading ? "Starting..." : "Start AI"}
         </button>
+
+        
       </div>
 
-      {/* Right: Avatar Upload */}
+      {/* Right: Avatar Upload + API & Twitter Inputs */}
       <div className="avatar-wrapper">
         <div className="avatar-container">
           <div className="avatar-box" onClick={handleAvatarClick}>
@@ -171,59 +139,23 @@ export default function Home() {
             )}
             <input type="file" accept="image/*" ref={fileInputRef} onChange={handleFileChange} />
           </div>
-          <div className="ai-card">
-              {/* 開發者 */}
-              <div className="developer">
-                <span>Developer</span>
-                <a href="#" className="developer-address">
-                  <img src="/your-avatar.png" alt="avatar" className="developer-avatar" />
-                  0xa2...4a8b
-                </a>
-              </div>
 
-              <hr className="divider" />
+          <h2>Account Info</h2>
+          <label className="input-title">OpenAI API Key</label>
+          <input type="text" name="apiKey" value={character.apiKey} onChange={handleChange} />
+          <p className="example-text">Example: sk-********************************</p>
 
-              {/* 名稱 */}
-              <h2 className="ai-name">AltcoinChad</h2>
-              <p className="ai-address">0xE57Af2C0674B2Fa993346c34BB2832E897754aAD</p>
+          <label className="input-title">Twitter Email</label>
+          <input type="email" name="twitterEmail" value={character.twitterEmail} onChange={handleChange} />
+          <p className="example-text">Example: example@gmail.com</p>
 
-              {/* 說明 */}
-              <div className="description">
-                <span className="label">Description：</span>
-                <span className="desc-text">AltcoinChad</span>
-              </div>
+          <label className="input-title">Twitter Username</label>
+          <input type="text" name="twitterUsername" value={character.twitterUsername} onChange={handleChange} />
+          <p className="example-text">Example: yourusername</p>
 
-              {/* 價格 */}
-              <div className="price">
-                <span className="label">Price：</span>
-                <span className="price-value">$113.49</span>
-              </div>
-            </div>
-
-              {/* ✅ Connect Wallet Button */}
-  {/* <button className="connect-wallet-btn" onClick={handleConnectWallet}>
-    Connect Metamask
-  </button> */}
-<div className="swap-container">
-  {/* <h2 className="swap-title">Swap</h2> */}
-
-  <div className="swap-options">
-    <button className="swap-btn active">Buy Monado</button>
-    <button className="swap-btn">Sell Monado</button>
-  </div>
-
-  <div className="swap-info">
-    <span>Swap Fee:</span> <span className="fee">1%</span>
-  </div>
-
-  <div className="swap-input-wrapper">
-    <input type="number" className="swap-input" placeholder="0.00" />
-    <div className="swap-token">WOAS</div>
-  </div>
-
-  <button className="connect-wallet-btn">Connect Wallet</button>
-</div>
-
+          <label className="input-title">Twitter Password</label>
+          <input type="password" name="twitterPassword" value={character.twitterPassword} onChange={handleChange} />
+          <p className="example-text">Example: ********</p>
         </div>
       </div>
     </div>
