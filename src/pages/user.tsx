@@ -1,6 +1,14 @@
 import "../styles/globals.css";
-import ProgressBar from '../components/ProgressBar';
+import ProgressBar from "../components/ProgressBar";
 import { useState, useEffect } from "react";
+import { useReadTokenInfoData } from "@/blockchain/useReadTokenInfo";
+import {
+  ConnectWalletButton,
+  truncateAddress,
+} from "@shared-components/atom/buttons/ConnectWalletButton";
+import { useAccount } from "wagmi";
+import { useGetPairReserves } from "@/blockchain/useGetPairReserves";
+import { ZeroAddress } from "ethers";
 
 declare global {
   interface Window {
@@ -9,11 +17,24 @@ declare global {
 }
 
 export default function UserPage() {
+  const { address, isConnected } = useAccount();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const avatarUrl = "/mascotImage.webp"; // Default avatar image
-  const percentage = 37.08; // Progress percentage
 
   const [tweets, setTweets] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const { tokenInfoList, isLoading } = useReadTokenInfoData();
+
+  const { nativeReserve } = useGetPairReserves(
+    tokenInfoList && tokenInfoList.length > 0 && tokenInfoList[0]?.data
+      ? (tokenInfoList[0].data.pair as `0x${string}`)
+      : (ZeroAddress as `0x${string}`)
+  );
 
   // Fetch Twitter posts when component loads
   useEffect(() => {
@@ -28,31 +49,48 @@ export default function UserPage() {
         setLoading(false);
       }
     };
-    fetchTweets();
-  }, []);
-
-  const handleConnectWallet = async () => {
-    if (typeof window.ethereum !== "undefined") {
-      try {
-        const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
-        console.log("Connected account:", accounts[0]);
-        alert(`Connected: ${accounts[0]}`);
-      } catch (error) {
-        console.error("User rejected connection");
-      }
-    } else {
-      alert("Metamask not found. Please install Metamask.");
+    if (mounted) {
+      fetchTweets();
+      console.log("aa", tokenInfoList);
     }
-  };
+  }, [mounted, tokenInfoList]);
+
+  // const handleConnectWallet = async () => {
+  //   if (typeof window.ethereum !== "undefined") {
+  //     try {
+  //       const accounts = await window.ethereum.request({
+  //         method: "eth_requestAccounts",
+  //       });
+  //       console.log("Connected account:", accounts[0]);
+  //       alert(`Connected: ${accounts[0]}`);
+  //     } catch (error) {
+  //       console.error("User rejected connection", error);
+  //     }
+  //   } else {
+  //     alert("Metamask not found. Please install Metamask.");
+  //   }
+  // };
+
+  if (!mounted || isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  console.log("nativeReserve", nativeReserve);
 
   return (
-    <div className="main-container" style={{ display: 'flex', gap: '30px', justifyContent: 'center' }}>
-      
+    <div
+      className="main-container"
+      style={{ display: "flex", gap: "30px", justifyContent: "center" }}
+    >
       {/* ✅ Left Section */}
       <div className="avatar-container">
         {/* Avatar - Circular */}
         <div className="avatar-box">
-          <img src={avatarUrl} alt="Character Avatar" style={{ borderRadius: '50%' }} />
+          <img
+            src={avatarUrl}
+            alt="Character Avatar"
+            style={{ borderRadius: "50%" }}
+          />
         </div>
 
         {/* AI Card */}
@@ -61,33 +99,50 @@ export default function UserPage() {
             <span>Developer</span>
             <a href="#" className="developer-address">
               <img src={avatarUrl} alt="avatar" className="developer-avatar" />
-              0xa2...4a8b
+              {tokenInfoList[0].data
+                ? truncateAddress(tokenInfoList[0].data?.creator)
+                : ZeroAddress}
             </a>
           </div>
 
           <hr className="divider" />
 
-          <h2 className="ai-name">AltcoinChad</h2>
-          <p className="ai-address">0xE57Af2C0674B2Fa993346c34BB2832E897754aAD</p>
+          <h2 className="ai-name">{tokenInfoList[0].data?.name}</h2>
+          <p className="ai-address">
+            {tokenInfoList[0].data?.agentToken ===
+            "0x0000000000000000000000000000000000000000"
+              ? tokenInfoList[0].data?.token
+              : tokenInfoList[0].data?.agentToken}
+          </p>
 
           <div className="description">
             <span className="label">Description:</span>
-            <span className="desc-text">AltcoinChad</span>
+            <span className="desc-text">
+              {tokenInfoList[0].data?.description}
+            </span>
           </div>
 
           <div className="price">
             <span className="label">Price:</span>
-            <span className="price-value">$113.49</span>
+            <span className="price-value">
+              {(
+                Number(tokenInfoList[0].data?.marketCap || 1) /
+                Number(tokenInfoList[0].data?.supply || 1)
+              ).toFixed(10)}{" "}
+              WMON
+            </span>
           </div>
 
-          <ProgressBar percentage={percentage} />
+          <ProgressBar
+            percentage={Math.round((35000 - Number(nativeReserve)) / 35000)}
+          />
         </div>
 
         {/* Swap Section */}
         <div className="swap-container" style={{ marginTop: "20px" }}>
           <div className="swap-options">
-            <button className="swap-btn active">Buy Monado</button>
-            <button className="swap-btn">Sell Monado</button>
+            <button className="swap-btn active">Buy </button>
+            <button className="swap-btn">Sell </button>
           </div>
 
           <div className="swap-info">
@@ -96,46 +151,75 @@ export default function UserPage() {
 
           <div className="swap-input-wrapper">
             <input type="number" className="swap-input" placeholder="0.00" />
-            <div className="swap-token">WOAS</div>
+            <div className="swap-token">WMON</div>
           </div>
-
-          <button className="connect-wallet-btn" onClick={handleConnectWallet}>Connect Wallet</button>
         </div>
       </div>
 
       {/* ✅ Right Twitter Section */}
-      <div className="avatar-container" style={{ justifyContent: 'flex-start', alignItems: 'flex-start', padding: '20px' }}>
-        <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-          <h3 style={{ color: '#5a4a42', fontSize: '18px', marginBottom: '12px', fontWeight: 'bold' }}>Latest Posts</h3>
-          
-          {loading && <p style={{ color: '#8a6d5e', fontStyle: 'italic' }}>Loading...</p>}
+      <div
+        className="avatar-container"
+        style={{
+          justifyContent: "flex-start",
+          alignItems: "flex-start",
+          padding: "20px",
+        }}
+      >
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            gap: "16px",
+          }}
+        >
+          <h3
+            style={{
+              color: "#5a4a42",
+              fontSize: "18px",
+              marginBottom: "12px",
+              fontWeight: "bold",
+            }}
+          >
+            Latest Posts
+          </h3>
 
-          {!loading && tweets.length === 0 && <p style={{ color: '#8a6d5e', fontStyle: 'italic' }}>No posts found.</p>}
+          {loading && (
+            <p style={{ color: "#8a6d5e", fontStyle: "italic" }}>Loading...</p>
+          )}
+
+          {!loading && tweets.length === 0 && (
+            <p style={{ color: "#8a6d5e", fontStyle: "italic" }}>
+              No posts found.
+            </p>
+          )}
 
           {tweets.map((tweet, index) => (
             <div
               key={index}
               style={{
-                background: '#fffaf0',
-                padding: '16px',
-                borderRadius: '12px',
-                boxShadow: '0 4px 8px rgba(90, 74, 66, 0.1)',
-                color: '#5a4a42',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '8px',
-                wordBreak: 'break-word'
+                background: "#fffaf0",
+                padding: "16px",
+                borderRadius: "12px",
+                boxShadow: "0 4px 8px rgba(90, 74, 66, 0.1)",
+                color: "#5a4a42",
+                display: "flex",
+                flexDirection: "column",
+                gap: "8px",
+                wordBreak: "break-word",
               }}
             >
               <p style={{ margin: 0 }}>{tweet.text}</p>
-              <small style={{ color: '#8a6d5e', fontSize: '12px' }}>
+              <small style={{ color: "#8a6d5e", fontSize: "12px" }}>
                 {new Date(tweet.created_at).toLocaleString()}
               </small>
             </div>
           ))}
         </div>
       </div>
-
+      <div>
+        <ConnectWalletButton address={address} isConnected={isConnected} />
+      </div>
     </div>
   );
 }

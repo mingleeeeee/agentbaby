@@ -7,6 +7,8 @@ export const MAX_UINT256 = BigInt(
   "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
 );
 
+export const FETCH_TOKEN_ID = 1;
+
 export const LAUNCH_TOKEN_PURCHASE_PRICE = "1000";
 
 export const FPAIR_CONTRACT_ABI = [

@@ -1,0 +1,177 @@
+@use "shared-components/styles/breakpoints";
+
+@font-face {
+  font-family: "More Sugar";
+  src: url("/fonts/MoreSugar.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "More Sugar Thin";
+  src: url("/fonts/MoreSugarThin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Comica";
+  src: url("/fonts/Comica.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nikumara";
+  src:
+    url("/fonts/Nikumara.otf") format("opentype"),
+    url("/fonts/Nikumara_Mac") format("truetype"),
+    url("/fonts/Nikumara_Windows") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin more-sugar {
+  font-family: "More Sugar", sans-serif;
+}
+
+@mixin more-sugar-thin {
+  font-family: "More Sugar Thin", sans-serif;
+}
+
+@mixin Comica {
+  font-family: "Comica", sans-serif;
+}
+
+.texts {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lineCramp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.HeadlineXL {
+  @include more-sugar;
+  font-size: 108px;
+}
+.HeadlineL {
+  @include more-sugar;
+  font-size: 72px;
+}
+.HeadlineM {
+  @include more-sugar;
+  font-size: 40px;
+}
+.HeadlineS {
+  @include more-sugar;
+  font-size: 32px;
+}
+.HeadlineXS {
+  @include more-sugar;
+  font-size: 28px;
+}
+
+.BodyXL {
+  @include more-sugar;
+  font-size: 24px;
+}
+.BodyL {
+  @include more-sugar;
+  font-size: 21px;
+}
+.BodyM {
+  @include more-sugar;
+  font-size: 16px;
+}
+.BodyS {
+  @include more-sugar;
+  font-size: 15px;
+}
+.BodyXS {
+  @include more-sugar;
+  font-size: 13px;
+}
+.BodyXXS {
+  @include more-sugar;
+  font-size: 11px;
+}
+
+.BodyXL_Light {
+  @include more-sugar-thin;
+  font-size: 24px;
+}
+.BodyL_Light {
+  @include more-sugar-thin;
+  font-size: 21px;
+}
+.BodyM_Light {
+  @include more-sugar-thin;
+  font-size: 16px;
+  font-weight: 400;
+}
+.BodyS_Light {
+  @include more-sugar-thin;
+  font-size: 15px;
+}
+.BodyXS_Light {
+  @include more-sugar-thin;
+  font-size: 13px;
+  font-weight: 400;
+}
+.BodyXXS_Light {
+  @include more-sugar-thin;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+// Comica
+.BodyXL_Comica {
+  @include Comica;
+  font-size: 24px;
+}
+.BodyL_Comica {
+  @include Comica;
+  font-size: 21px;
+}
+.BodyM_Comica {
+  @include Comica;
+  font-size: 16px;
+}
+.BodyS_Comica {
+  @include Comica;
+  font-size: 15px;
+}
+.BodyXS_Comica {
+  @include Comica;
+  font-size: 13px;
+}
+.BodyXXS_Comica {
+  @include Comica;
+  font-size: 11px;
+}
+
+.align-center {
+  text-align: center;
+}
+.align-right {
+  text-align: right;
+}
+.align-left {
+  text-align: left;
+}
+.gradient-text {
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.outlined-text {
+  -webkit-text-stroke: 1px;
+  -webkit-text-fill-color: transparent;
+}
