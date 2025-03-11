@@ -6,9 +6,12 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "tweets": "node scripts/gettweets.mjs"
   },
   "dependencies": {
+    "agent-twitter-client": "^0.0.18",
+    "dotenv": "^16.4.7",
     "formidable": "^3.5.2",
     "next": "15.2.1",
     "react": "^19.0.0",
