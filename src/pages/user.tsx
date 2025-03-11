@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import ProgressBar from "../components/ProgressBar";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { useReadTokenInfoData } from "@/blockchain/useReadTokenInfo";
 import {
   ConnectWalletButton,
@@ -9,12 +10,17 @@ import {
 import { useAccount } from "wagmi";
 import { useGetPairReserves } from "@/blockchain/useGetPairReserves";
 import { ZeroAddress } from "ethers";
-
-declare global {
-  interface Window {
-    ethereum?: any;
-  }
-}
+import { useApprove } from "@/blockchain/useApproveToken";
+import {
+  BASE_TOKEN_ADDRESS,
+  BASE_TOKEN_CONTRACT_ABI,
+  FERC20_CONTRACT_ABI,
+  FROUTER_ADDRESS,
+  MAX_UINT256,
+} from "@/blockchain/cosntant";
+import { usePlaceTrade } from "@/blockchain/useInternalPlaceTrade";
+import { Abi } from "viem";
+import { useTokenAllowance } from "@/blockchain/useTokenAllowance";
 
 export default function UserPage() {
   const { address, isConnected } = useAccount();
@@ -28,6 +34,8 @@ export default function UserPage() {
 
   const [tweets, setTweets] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [inputAmount, setInputAmount] = useState<number>(0);
+
   const { tokenInfoList, isLoading } = useReadTokenInfoData();
 
   const { nativeReserve } = useGetPairReserves(
@@ -35,6 +43,32 @@ export default function UserPage() {
       ? (tokenInfoList[0].data.pair as `0x${string}`)
       : (ZeroAddress as `0x${string}`)
   );
+
+  const { approve, handleApprove } = useApprove();
+  const { handlePlaceTrade } = usePlaceTrade();
+  const { allowance: baseTokenAllowance } = useTokenAllowance(
+    BASE_TOKEN_ADDRESS as `0x${string}`,
+    FROUTER_ADDRESS as `0x${string}`,
+    BASE_TOKEN_CONTRACT_ABI as Abi,
+    address as `0x${string}`
+  );
+
+  console.log("baseTokenAllowance", baseTokenAllowance);
+
+  const { allowance: memeTokenAllowance } = useTokenAllowance(
+    tokenInfoList && tokenInfoList.length > 0 && tokenInfoList[0]?.data
+      ? (tokenInfoList[0].data.token as `0x${string}`)
+      : (ZeroAddress as `0x${string}`),
+    FROUTER_ADDRESS as `0x${string}`,
+    FERC20_CONTRACT_ABI as Abi,
+    address as `0x${string}`
+  );
+
+  console.log("memeTokenAllowance", memeTokenAllowance);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputAmount(Number(e.target.value));
+  };
 
   // Fetch Twitter posts when component loads
   useEffect(() => {
@@ -55,21 +89,48 @@ export default function UserPage() {
     }
   }, [mounted, tokenInfoList]);
 
-  // const handleConnectWallet = async () => {
-  //   if (typeof window.ethereum !== "undefined") {
-  //     try {
-  //       const accounts = await window.ethereum.request({
-  //         method: "eth_requestAccounts",
-  //       });
-  //       console.log("Connected account:", accounts[0]);
-  //       alert(`Connected: ${accounts[0]}`);
-  //     } catch (error) {
-  //       console.error("User rejected connection", error);
-  //     }
-  //   } else {
-  //     alert("Metamask not found. Please install Metamask.");
-  //   }
-  // };
+  const handleBuy = async () => {
+    // alert("Buy button clicked");
+    if (baseTokenAllowance !== MAX_UINT256) {
+      handleApprove(
+        BASE_TOKEN_ADDRESS as `0x${string}`,
+        FROUTER_ADDRESS as `0x${string}`,
+        BASE_TOKEN_CONTRACT_ABI as Abi
+      );
+    }
+
+    console.log("baseTokenAllowance1", baseTokenAllowance);
+    console.log("MAX_UINT2561", MAX_UINT256);
+    console.log("approve", approve);
+
+    await handlePlaceTrade(
+      inputAmount,
+      tokenInfoList[0].data?.token as `0x${string}`,
+      "buy"
+    );
+
+    console.log("handleBuy", inputAmount);
+  };
+
+  const handleSell = async () => {
+    // alert("Sell button clicked");
+    if (memeTokenAllowance !== MAX_UINT256) {
+      handleApprove(
+        tokenInfoList[0].data?.token as `0x${string}`,
+        FROUTER_ADDRESS,
+        FERC20_CONTRACT_ABI
+      );
+    }
+
+    console.log("memeTokenAllowance2", memeTokenAllowance);
+    console.log("MAX_UINT2562", MAX_UINT256);
+
+    await handlePlaceTrade(
+      inputAmount,
+      tokenInfoList[0].data?.token as `0x${string}`,
+      "sell"
+    );
+  };
 
   if (!mounted || isLoading) {
     return <div>Loading...</div>;
@@ -85,13 +146,13 @@ export default function UserPage() {
       {/* ✅ Left Section */}
       <div className="avatar-container">
         {/* Avatar - Circular */}
-        <div className="avatar-box">
-          <img
-            src={avatarUrl}
-            alt="Character Avatar"
-            style={{ borderRadius: "50%" }}
-          />
-        </div>
+        <Image
+          src={avatarUrl}
+          alt="Character Avatar"
+          width={100}
+          height={100}
+          style={{ borderRadius: "50%" }}
+        />
 
         {/* AI Card */}
         <div className="ai-card">
@@ -141,8 +202,12 @@ export default function UserPage() {
         {/* Swap Section */}
         <div className="swap-container" style={{ marginTop: "20px" }}>
           <div className="swap-options">
-            <button className="swap-btn active">Buy </button>
-            <button className="swap-btn">Sell </button>
+            <button className="swap-btn active" onClick={handleBuy}>
+              Buy{" "}
+            </button>
+            <button className="swap-btn" onClick={handleSell}>
+              Sell{" "}
+            </button>
           </div>
 
           <div className="swap-info">
@@ -150,8 +215,14 @@ export default function UserPage() {
           </div>
 
           <div className="swap-input-wrapper">
-            <input type="number" className="swap-input" placeholder="0.00" />
-            <div className="swap-token">WMON</div>
+            <input
+              type="text"
+              className="swap-input"
+              placeholder="0.00"
+              value={inputAmount}
+              onChange={handleInputChange}
+            />
+            <div className="swap-token">AMOUNT</div>
           </div>
         </div>
       </div>

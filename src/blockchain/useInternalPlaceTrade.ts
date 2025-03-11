@@ -21,12 +21,11 @@ export const usePlaceTrade = () => {
       args: [
         action === "buy"
           ? BigInt(parseEther(amount.toString()))
-          : BigInt(amount.toString()),
+          : BigInt(parseEther(amount.toString())),
         tokenAddress,
       ],
       chainId: DESIRED_CHAIN_ID,
     });
-
     return result;
   };
 

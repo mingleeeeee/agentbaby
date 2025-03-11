@@ -5,7 +5,7 @@ export const useTokenAllowance = (
   tokenContractAddress: `0x${string}`,
   accessorContractAddress: `0x${string}`,
   abi: Abi,
-  userAddress: `0x${string}`,
+  userAddress: `0x${string}`
 ) => {
   const { data, error, isLoading } = useReadContract({
     address: tokenContractAddress,
@@ -15,7 +15,7 @@ export const useTokenAllowance = (
   });
 
   return {
-    allowance: data,
+    allowance: data as bigint,
     error,
     isLoading,
   };

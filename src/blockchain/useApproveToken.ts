@@ -9,6 +9,7 @@ export const useApprove = () => {
     accessorContractAddress: `0x${string}`,
     abi: Abi
   ) => {
+    console.log("Approving token");
     approve.writeContract({
       address: tokenContractAddress,
       abi: abi,
