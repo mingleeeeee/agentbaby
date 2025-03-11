@@ -8,6 +8,6 @@ pnpm-debug.log
 
 
 # next.js
-/.next/
+.next
 /out/
 
