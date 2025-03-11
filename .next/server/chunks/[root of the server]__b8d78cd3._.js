@@ -38,7 +38,8 @@ var __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$2
 ;
 ;
 function handler(req, res) {
-    const filePath = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join('/home/ubuntu/eliza/output', 'tweets.json'); // 確認是正確路徑
+    //const filePath = path.join('/home/ubuntu/eliza/output', 'tweets.json'); // eliza
+    const filePath = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join('public/data', 'tweets.json'); // test
     try {
         const fileContent = __TURBOPACK__imported__module__$5b$externals$5d2f$fs__$5b$external$5d$__$28$fs$2c$__cjs$29$__["default"].readFileSync(filePath, 'utf8');
         const jsonData = JSON.parse(fileContent);

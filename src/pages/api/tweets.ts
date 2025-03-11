@@ -4,7 +4,8 @@ import fs from 'fs';
 import path from 'path';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const filePath = path.join('/home/ubuntu/eliza/output', 'tweets.json'); // 確認是正確路徑
+  //const filePath = path.join('/home/ubuntu/eliza/output', 'tweets.json'); // eliza
+  const filePath = path.join('public/data', 'tweets.json'); // test
 
   try {
     const fileContent = fs.readFileSync(filePath, 'utf8');
