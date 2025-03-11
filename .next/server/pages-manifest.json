@@ -1,7 +1,0 @@
-{
-  "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/user": "pages/user.js",
-  "/api/twitter": "pages/api/twitter.js"
-}
