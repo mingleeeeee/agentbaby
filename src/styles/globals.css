@@ -65,47 +65,33 @@ h1 {
   text-align: center;
 }
 
-/* ✅ 头像上传框 */
+
+/* ✅ Avatar 外框，絕對正圓 */
 .avatar-box {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background-color: #d4b18f;
-  border: 3px dashed #a3826c;
+  --avatar-size: 180px; /* ✅ 可自由調整大小變量 */
+
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%; /* ✅ 保證圓形 */
+  overflow: hidden; /* ✅ 裁切溢出部分 */
+  border: 4px solid #a3826c; /* ✅ 邊框顏色，照你的風格 */
+  background-color: #d4b18f; /* ✅ 背景顏色 */
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  cursor: pointer;
-  position: relative;
-  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ✅ 陰影美化 */
+  box-sizing: border-box; /* ✅ 包含 padding 和 border */
 }
 
-/* ✅ 讓 "Upload Image" 文字置中 */
-.avatar-box span {
-  position: absolute;
-  color: #5a4a42;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  opacity: 0.7;
-}
-
-/* ✅ 隱藏 input file */
-.avatar-box input {
-  display: none;
-}
-
-/* ✅ 當有圖片時，隱藏 "Upload Image" 文字 */
+/* ✅ 圓內圖片，固定比例填滿 */
 .avatar-box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* ✅ 填滿並裁切，防止變形 */
+  border-radius: 50%; /* ✅ 再次確保圖片本身為圓形 */
+  display: block; /* ✅ 消除預設空隙 */
 }
 
-.avatar-box img + span {
-  display: none;
-}
 
 /* ✅ Increase textarea size & readability */
 textarea {
@@ -394,3 +380,43 @@ button:hover {
 .connect-wallet-btn:hover {
   background: #b88665; /* 深一點 */
 }
+
+
+/* ✅ 進度條容器 */
+.progress-bar-wrapper {
+  width: 100%;
+  max-width: 400px; /* 可以調整寬度 */
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ✅ 外框 */
+.progress-bar-container {
+  width: 100%;
+  height: 20px;
+  background-color: #f0e6d2;
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-right: 10px;
+}
+
+/* ✅ 進度條填充 */
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #d5a67e, #b88665); /* 焦糖漸層 */
+  border-radius: 999px;
+  transition: width 0.3s ease-in-out;
+}
+
+/* ✅ 百分比文字 */
+.progress-bar-text {
+  font-weight: bold;
+  color: #a96f43; /* 深焦糖色 */
+  min-width: 50px;
+  text-align: right;
+}
+

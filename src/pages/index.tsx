@@ -160,72 +160,7 @@ export default function Home() {
         </button>
       </div>
 
-      {/* Right: Avatar Upload */}
-      <div className="avatar-wrapper">
-        <div className="avatar-container">
-          <div className="avatar-box" onClick={handleAvatarClick}>
-            {character.avatar ? (
-              <img src={character.avatar} alt="Character Avatar" />
-            ) : (
-              <span>Click to upload an image</span>
-            )}
-            <input type="file" accept="image/*" ref={fileInputRef} onChange={handleFileChange} />
-          </div>
-          <div className="ai-card">
-              {/* 開發者 */}
-              <div className="developer">
-                <span>Developer</span>
-                <a href="#" className="developer-address">
-                  <img src="/your-avatar.png" alt="avatar" className="developer-avatar" />
-                  0xa2...4a8b
-                </a>
-              </div>
 
-              <hr className="divider" />
-
-              {/* 名稱 */}
-              <h2 className="ai-name">AltcoinChad</h2>
-              <p className="ai-address">0xE57Af2C0674B2Fa993346c34BB2832E897754aAD</p>
-
-              {/* 說明 */}
-              <div className="description">
-                <span className="label">Description：</span>
-                <span className="desc-text">AltcoinChad</span>
-              </div>
-
-              {/* 價格 */}
-              <div className="price">
-                <span className="label">Price：</span>
-                <span className="price-value">$113.49</span>
-              </div>
-            </div>
-
-              {/* ✅ Connect Wallet Button */}
-  {/* <button className="connect-wallet-btn" onClick={handleConnectWallet}>
-    Connect Metamask
-  </button> */}
-<div className="swap-container">
-  {/* <h2 className="swap-title">Swap</h2> */}
-
-  <div className="swap-options">
-    <button className="swap-btn active">Buy Monado</button>
-    <button className="swap-btn">Sell Monado</button>
-  </div>
-
-  <div className="swap-info">
-    <span>Swap Fee:</span> <span className="fee">1%</span>
-  </div>
-
-  <div className="swap-input-wrapper">
-    <input type="number" className="swap-input" placeholder="0.00" />
-    <div className="swap-token">WOAS</div>
-  </div>
-
-  <button className="connect-wallet-btn">Connect Wallet</button>
-</div>
-
-        </div>
-      </div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/[root of the server]__23b907f9._.js", {
+(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/[root of the server]__042c94cf._.js", {
 
 "[turbopack]/browser/dev/hmr-client/hmr-client.ts [client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
@@ -462,7 +462,7 @@ function triggerUpdate(msg) {
     }
 }
 }}),
-"[project]/src/pages/index.tsx [client] (ecmascript)": ((__turbopack_context__) => {
+"[project]/src/pages/user.tsx [client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
 var { g: global, d: __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
@@ -544,37 +544,6 @@ function Home() {
             [e.target.name]: e.target.value
         });
     };
-    // Start AI Agent
-    const startAI = async ()=>{
-        setLoading(true);
-        const response = await fetch("/api/start", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                character
-            })
-        });
-        const result = await response.json();
-        alert(result.message);
-        setIsRunning(true);
-        setLoading(false);
-    };
-    // Stop AI Agent
-    const stopAI = async ()=>{
-        setLoading(true);
-        const response = await fetch("/api/stop", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        });
-        const result = await response.json();
-        alert(result.message);
-        setIsRunning(false);
-        setLoading(false);
-    };
     const handleConnectWallet = async ()=>{
         if (typeof window.ethereum !== "undefined") {
             try {
@@ -592,247 +561,271 @@ function Home() {
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "main-container",
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "info-container",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "avatar-wrapper",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "avatar-container",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                        className: "page-title",
-                        children: "Monado AI Creator"
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 120,
-                        columnNumber: 9
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "avatar-box",
+                        onClick: handleAvatarClick,
+                        children: [
+                            character.avatar ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                src: character.avatar,
+                                alt: "Character Avatar"
+                            }, void 0, false, {
+                                fileName: "[project]/src/pages/user.tsx",
+                                lineNumber: 96,
+                                columnNumber: 15
+                            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                children: "Click to upload an image"
+                            }, void 0, false, {
+                                fileName: "[project]/src/pages/user.tsx",
+                                lineNumber: 98,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                type: "file",
+                                accept: "image/*",
+                                ref: fileInputRef,
+                                onChange: handleFileChange
+                            }, void 0, false, {
+                                fileName: "[project]/src/pages/user.tsx",
+                                lineNumber: 100,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/pages/user.tsx",
+                        lineNumber: 94,
+                        columnNumber: 11
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                        className: "input-title",
-                        children: "AI Agent Name"
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 122,
-                        columnNumber: 9
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "ai-card",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "developer",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        children: "Developer"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/pages/user.tsx",
+                                        lineNumber: 105,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                        href: "#",
+                                        className: "developer-address",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                src: "/your-avatar.png",
+                                                alt: "avatar",
+                                                className: "developer-avatar"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/pages/user.tsx",
+                                                lineNumber: 107,
+                                                columnNumber: 19
+                                            }, this),
+                                            "0xa2...4a8b"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/pages/user.tsx",
+                                        lineNumber: 106,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/pages/user.tsx",
+                                lineNumber: 104,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("hr", {
+                                className: "divider"
+                            }, void 0, false, {
+                                fileName: "[project]/src/pages/user.tsx",
+                                lineNumber: 112,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                className: "ai-name",
+                                children: "AltcoinChad"
+                            }, void 0, false, {
+                                fileName: "[project]/src/pages/user.tsx",
+                                lineNumber: 115,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "ai-address",
+                                children: "0xE57Af2C0674B2Fa993346c34BB2832E897754aAD"
+                            }, void 0, false, {
+                                fileName: "[project]/src/pages/user.tsx",
+                                lineNumber: 116,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "description",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "label",
+                                        children: "Description："
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/pages/user.tsx",
+                                        lineNumber: 120,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "desc-text",
+                                        children: "AltcoinChad"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/pages/user.tsx",
+                                        lineNumber: 121,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/pages/user.tsx",
+                                lineNumber: 119,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "price",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "label",
+                                        children: "Price："
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/pages/user.tsx",
+                                        lineNumber: 126,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "price-value",
+                                        children: "$113.49"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/pages/user.tsx",
+                                        lineNumber: 127,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/pages/user.tsx",
+                                lineNumber: 125,
+                                columnNumber: 15
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/pages/user.tsx",
+                        lineNumber: 102,
+                        columnNumber: 11
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                        type: "text",
-                        name: "name",
-                        value: character.name,
-                        onChange: handleChange
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 123,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "example-text",
-                        children: "Example: Monado"
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 124,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                        className: "input-title",
-                        children: "Personality"
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 126,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
-                        name: "personality",
-                        value: character.personality,
-                        onChange: handleChange
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 127,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "example-text",
-                        children: "Example: Wise, mysterious, and highly intelligent"
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 128,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                        className: "input-title",
-                        children: "Description"
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 130,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
-                        name: "description",
-                        value: character.description,
-                        onChange: handleChange
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 131,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "example-text",
-                        children: "Example: An AI entity that guides users through the unknown."
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 132,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                        className: "input-title",
-                        children: "Short Bio"
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 134,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
-                        name: "bio",
-                        value: character.bio,
-                        onChange: handleChange
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 135,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "example-text",
-                        children: "Example: I am Monado, a digital entity bridging knowledge and curiosity."
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 136,
-                        columnNumber: 9
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "swap-container",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "swap-options",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        className: "swap-btn active",
+                                        children: "Buy Monado"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/pages/user.tsx",
+                                        lineNumber: 141,
+                                        columnNumber: 5
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        className: "swap-btn",
+                                        children: "Sell Monado"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/pages/user.tsx",
+                                        lineNumber: 142,
+                                        columnNumber: 5
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/pages/user.tsx",
+                                lineNumber: 140,
+                                columnNumber: 3
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "swap-info",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        children: "Swap Fee:"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/pages/user.tsx",
+                                        lineNumber: 146,
+                                        columnNumber: 5
+                                    }, this),
+                                    " ",
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "fee",
+                                        children: "1%"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/pages/user.tsx",
+                                        lineNumber: 146,
+                                        columnNumber: 28
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/pages/user.tsx",
+                                lineNumber: 145,
+                                columnNumber: 3
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "swap-input-wrapper",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                        type: "number",
+                                        className: "swap-input",
+                                        placeholder: "0.00"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/pages/user.tsx",
+                                        lineNumber: 150,
+                                        columnNumber: 5
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "swap-token",
+                                        children: "WOAS"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/pages/user.tsx",
+                                        lineNumber: 151,
+                                        columnNumber: 5
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/pages/user.tsx",
+                                lineNumber: 149,
+                                columnNumber: 3
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                className: "connect-wallet-btn",
+                                onClick: handleConnectWallet,
+                                children: "Connect Wallet"
+                            }, void 0, false, {
+                                fileName: "[project]/src/pages/user.tsx",
+                                lineNumber: 154,
+                                columnNumber: 3
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/pages/user.tsx",
+                        lineNumber: 137,
+                        columnNumber: 1
                     }, this)
                 ]
             }, void 0, true, {
-                fileName: "[project]/src/pages/index.tsx",
-                lineNumber: 119,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "info-container",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                        className: "input-title",
-                        children: "Character Backstory"
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 141,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
-                        name: "lore",
-                        value: character.lore,
-                        onChange: handleChange
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 142,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "example-text",
-                        children: "Example: Once a hidden AI in cyberspace, Monado now aids users."
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 143,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                        className: "input-title",
-                        children: "Character’s Knowledge"
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 145,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
-                        name: "knowledge",
-                        value: character.knowledge,
-                        onChange: handleChange
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 146,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "example-text",
-                        children: "Example: AI processes information exponentially faster than humans."
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 147,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                        className: "input-title",
-                        children: "Topics of Interest"
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 149,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
-                        name: "topics",
-                        value: character.topics,
-                        onChange: handleChange
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 150,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "example-text",
-                        children: "Example: Machine Learning, Blockchain, Web3, Cryptography"
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 151,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                        className: "input-title",
-                        children: "Character Adjectives"
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 153,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
-                        name: "adjectives",
-                        value: character.adjectives,
-                        onChange: handleChange
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 154,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "example-text",
-                        children: "Example: Visionary, Intelligent, Mysterious, Enlightening"
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 155,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$40$19$2e$0$2e$0$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: isRunning ? stopAI : startAI,
-                        disabled: loading,
-                        children: loading ? "Processing..." : isRunning ? "Stop AI" : "Start AI"
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 158,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/pages/index.tsx",
-                lineNumber: 140,
-                columnNumber: 7
+                fileName: "[project]/src/pages/user.tsx",
+                lineNumber: 93,
+                columnNumber: 9
             }, this)
-        ]
-    }, void 0, true, {
-        fileName: "[project]/src/pages/index.tsx",
-        lineNumber: 117,
+        }, void 0, false, {
+            fileName: "[project]/src/pages/user.tsx",
+            lineNumber: 92,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/src/pages/user.tsx",
+        lineNumber: 89,
         columnNumber: 5
     }, this);
 }
@@ -844,15 +837,15 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
 }
 }}),
-"[next]/entry/page-loader.ts { PAGE => \"[project]/src/pages/index.tsx [client] (ecmascript)\" } [client] (ecmascript)": (function(__turbopack_context__) {
+"[next]/entry/page-loader.ts { PAGE => \"[project]/src/pages/user.tsx [client] (ecmascript)\" } [client] (ecmascript)": (function(__turbopack_context__) {
 
 var { g: global, d: __dirname, m: module, e: exports } = __turbopack_context__;
 {
-const PAGE_PATH = "/";
+const PAGE_PATH = "/user";
 (window.__NEXT_P = window.__NEXT_P || []).push([
     PAGE_PATH,
     ()=>{
-        return __turbopack_context__.r("[project]/src/pages/index.tsx [client] (ecmascript)");
+        return __turbopack_context__.r("[project]/src/pages/user.tsx [client] (ecmascript)");
     }
 ]);
 // @ts-expect-error module.hot exists
@@ -865,13 +858,13 @@ if (module.hot) {
     });
 }
 }}),
-"[project]/src/pages/index (hmr-entry)": ((__turbopack_context__) => {
+"[project]/src/pages/user (hmr-entry)": ((__turbopack_context__) => {
 "use strict";
 
 var { g: global, d: __dirname, m: module } = __turbopack_context__;
 {
-__turbopack_context__.r("[next]/entry/page-loader.ts { PAGE => \"[project]/src/pages/index.tsx [client] (ecmascript)\" } [client] (ecmascript)");
+__turbopack_context__.r("[next]/entry/page-loader.ts { PAGE => \"[project]/src/pages/user.tsx [client] (ecmascript)\" } [client] (ecmascript)");
 }}),
 }]);
 
-//# sourceMappingURL=%5Broot%20of%20the%20server%5D__23b907f9._.js.map
+//# sourceMappingURL=%5Broot%20of%20the%20server%5D__042c94cf._.js.map
