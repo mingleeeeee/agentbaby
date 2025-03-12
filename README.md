@@ -77,8 +77,24 @@ yarn dev
 - Fans of "Crypto Cat" buy tokens to support and join the ecosystem
 - If the AI gains enough popularity (tokens reach 100%), **Crypto Cat Token** will be officially listed on **KuruDex**
 
+### 🤖 What is ElizaOS?
+
+[ElizaOS](https://github.com/elizaOS/eliza) is the **backend AI engine** that powers the AI agents created through the Monado frontend. It manages the **lifecycle, actions, and autonomous behavior** of AI agents.
+
+Once an agent is created via Monado, ElizaOS runs the agent as a **real-time autonomous AI character**, capable of tasks like **posting on Twitter**, interacting with users, and following its designed personality and lore.
+
 ---
 
-**Contact / Community**: [Add your Discord, Telegram, Twitter links]
+### 🔑 Key Roles of ElizaOS
 
-> Building the AI-powered, token-driven future.
+- **Manage AI Agents**: Keeps the AI agent running and interacting based on its defined personality and knowledge.
+- **Execute Actions**: Automates actions such as Twitter posting, responding to events, and more.
+- **Sync with Token System**: Works together with the token economy created during the AI agent launch, allowing actions that could affect token value or community interaction.
+
+---
+
+### 💾 How to Install ElizaOS
+
+To set up ElizaOS, follow its repository for backend deployment:
+
+refer to https://github.com/elizaOS/eliza.git
