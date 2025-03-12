@@ -1,0 +1,39 @@
+$breakpoints: (
+  "mobile": "screen and (max-width: 810px)",
+  "notMobile": "screen and (min-width: 810px)",
+  "tablet": "screen and (min-width: 810px) and (max-width: 1200px)",
+  "desktop": "screen and (min-width: 1200px)",
+  "mobileTablet": "screen and (max-width: 1200px)",
+) !default;
+
+@mixin media($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 810px) {
+    @content;
+  }
+}
+@mixin notMobile {
+  @media screen and (min-width: 810px) {
+    @content;
+  }
+}
+@mixin mobileTablet {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (min-width: 810px) and (max-width: 1200px) {
+    @content;
+  }
+}

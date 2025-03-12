@@ -1,0 +1,19 @@
+$size: 8px;
+$radius: 4px;
+
+@mixin main {
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-Primary);
+    border-radius: $radius;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--color-Border);
+    border-radius: $radius;
+  }
+}
