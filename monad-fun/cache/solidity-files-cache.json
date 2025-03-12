@@ -1,0 +1,4603 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/liquidity-mining/IAuthorizerAdaptor.sol": {
+      "lastModificationDate": 1739181610214,
+      "contentHash": "27acdebbdf8b9495a28a401b984a8269",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/liquidity-mining/IAuthorizerAdaptor.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../solidity-utils/helpers/IAuthentication.sol",
+        "../vault/IVault.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IAuthorizerAdaptor"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/IAuthentication.sol": {
+      "lastModificationDate": 1739181610216,
+      "contentHash": "a3821d7f92cf5b86475b8517f5d985d3",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/IAuthentication.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IAuthentication"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/vault/IVault.sol": {
+      "lastModificationDate": 1739181610217,
+      "contentHash": "4f2b4839fac0610f19c82ddb05eb4449",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/vault/IVault.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../solidity-utils/openzeppelin/IERC20.sol",
+        "../solidity-utils/helpers/IAuthentication.sol",
+        "../solidity-utils/helpers/ISignaturesValidator.sol",
+        "../solidity-utils/helpers/ITemporarilyPausable.sol",
+        "../solidity-utils/misc/IWETH.sol",
+        "./IAsset.sol",
+        "./IAuthorizer.sol",
+        "./IFlashLoanRecipient.sol",
+        "./IProtocolFeesCollector.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IVault"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/solidity-utils/openzeppelin/IERC20.sol": {
+      "lastModificationDate": 1739181610216,
+      "contentHash": "95b5671b9c48dda09b99d09d58065558",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/solidity-utils/openzeppelin/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/ISignaturesValidator.sol": {
+      "lastModificationDate": 1739181610216,
+      "contentHash": "70260a858b6e3e2bdd67d05458be3073",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/ISignaturesValidator.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "ISignaturesValidator"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/ITemporarilyPausable.sol": {
+      "lastModificationDate": 1739181610216,
+      "contentHash": "be31b93e79e940bada10559d25853315",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/ITemporarilyPausable.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "ITemporarilyPausable"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/solidity-utils/misc/IWETH.sol": {
+      "lastModificationDate": 1739181610216,
+      "contentHash": "94450d2e54be5b7819faeefd43785601",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/solidity-utils/misc/IWETH.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../openzeppelin/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IWETH"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/vault/IAsset.sol": {
+      "lastModificationDate": 1739181610217,
+      "contentHash": "cede3c36f2724005baf7ad175111b4a7",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/vault/IAsset.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IAsset"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/vault/IAuthorizer.sol": {
+      "lastModificationDate": 1739181610217,
+      "contentHash": "1a615680d3d00ce3dd5d05f7c1adae8c",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/vault/IAuthorizer.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IAuthorizer"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/vault/IFlashLoanRecipient.sol": {
+      "lastModificationDate": 1739181610217,
+      "contentHash": "d35846594727a403a327e570cac1ff98",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/vault/IFlashLoanRecipient.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../solidity-utils/openzeppelin/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IFlashLoanRecipient"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/vault/IProtocolFeesCollector.sol": {
+      "lastModificationDate": 1739181610217,
+      "contentHash": "b734b98d0a7bcc6f630aec90bc2fc985",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/vault/IProtocolFeesCollector.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../solidity-utils/openzeppelin/IERC20.sol",
+        "./IVault.sol",
+        "./IAuthorizer.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IProtocolFeesCollector"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/helpers/SingletonAuthentication.sol": {
+      "lastModificationDate": 1739181610220,
+      "contentHash": "339633da352617257f1bb462e528af3f",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/helpers/SingletonAuthentication.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../../@balancer-labs/v2-interfaces/contracts/liquidity-mining/IAuthorizerAdaptor.sol",
+        "../../../../@balancer-labs/v2-interfaces/contracts/vault/IVault.sol",
+        "./Authentication.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "SingletonAuthentication"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/helpers/Authentication.sol": {
+      "lastModificationDate": 1739181610219,
+      "contentHash": "952defb5d05ba2fb5369f60b1e43b175",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/helpers/Authentication.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../../@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/BalancerErrors.sol",
+        "../../../../@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/IAuthentication.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "Authentication"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/BalancerErrors.sol": {
+      "lastModificationDate": 1739181610215,
+      "contentHash": "ba1305aab9f28a8c0251926e506f5c55",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/BalancerErrors.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "Errors"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/contracts/ProtocolFeePercentagesProvider.sol": {
+      "lastModificationDate": 1739181610223,
+      "contentHash": "db83a01f95d41e8591e218cf82d922d9",
+      "sourceName": "contracts/dexPool/balancer-v2/contracts/ProtocolFeePercentagesProvider.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../@balancer-labs/v2-interfaces/contracts/vault/IProtocolFeesCollector.sol",
+        "../@balancer-labs/v2-interfaces/contracts/standalone-utils/IProtocolFeePercentagesProvider.sol",
+        "../@balancer-labs/v2-solidity-utils/contracts/helpers/SingletonAuthentication.sol",
+        "../@balancer-labs/v2-solidity-utils/contracts/openzeppelin/SafeCast.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "ProtocolFeePercentagesProvider"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/standalone-utils/IProtocolFeePercentagesProvider.sol": {
+      "lastModificationDate": 1739181610216,
+      "contentHash": "f388f2ab77a4744d84f27b1c5f6ed316",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/standalone-utils/IProtocolFeePercentagesProvider.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IProtocolFeePercentagesProvider",
+        "ProtocolFeeType"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/openzeppelin/SafeCast.sol": {
+      "lastModificationDate": 1739181610221,
+      "contentHash": "eeb09436f1e0fd1a07c936551ca878cd",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/openzeppelin/SafeCast.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../../@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/BalancerErrors.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "SafeCast"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/openzeppelin/SafeMath.sol": {
+      "lastModificationDate": 1739181610221,
+      "contentHash": "0b61566b2fcec49d50ee8a1b85e80942",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/openzeppelin/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../../@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/BalancerErrors.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ERC20.sol": {
+      "lastModificationDate": 1739181610220,
+      "contentHash": "b7e057db27c199be90947f806a4460f6",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ERC20.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../../@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/BalancerErrors.sol",
+        "../../../../@balancer-labs/v2-interfaces/contracts/solidity-utils/openzeppelin/IERC20.sol",
+        "./SafeMath.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ERC20Permit.sol": {
+      "lastModificationDate": 1739181610221,
+      "contentHash": "1a875af161676cca1fbee63445d3a3a2",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ERC20Permit.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../../@balancer-labs/v2-interfaces/contracts/solidity-utils/openzeppelin/IERC20Permit.sol",
+        "./ERC20.sol",
+        "../helpers/EOASignaturesValidator.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "ERC20Permit"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/solidity-utils/openzeppelin/IERC20Permit.sol": {
+      "lastModificationDate": 1739181610216,
+      "contentHash": "985feecb2780411b0a6d7227fd4a06ac",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/solidity-utils/openzeppelin/IERC20Permit.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IERC20Permit"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/helpers/EOASignaturesValidator.sol": {
+      "lastModificationDate": 1739181610219,
+      "contentHash": "d255c499a37204e0e4280979da5af03b",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/helpers/EOASignaturesValidator.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../../@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/BalancerErrors.sol",
+        "../../../../@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/ISignaturesValidator.sol",
+        "../openzeppelin/EIP712.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "EOASignaturesValidator"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/openzeppelin/EIP712.sol": {
+      "lastModificationDate": 1739181610220,
+      "contentHash": "c245845dbd799fb144c468a0b223d077",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/openzeppelin/EIP712.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "EIP712"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/virtualPersona/AgentToken.sol": {
+      "lastModificationDate": 1741600144981,
+      "contentHash": "98c4ef1f925a546e8d6bf4a09a6fdd4e",
+      "sourceName": "contracts/virtualPersona/AgentToken.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/access/Ownable2StepUpgradeable.sol",
+        "@openzeppelin/contracts/utils/structs/EnumerableSet.sol",
+        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+        "./IAgentToken.sol",
+        "./IAgentFactory.sol",
+        "./IKuru.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "AgentToken"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/contracts/IWeightedPoolFactory.sol": {
+      "lastModificationDate": 1739181610223,
+      "contentHash": "8e4c641bb6470ebcfc1bc3ce30e0beb0",
+      "sourceName": "contracts/dexPool/balancer-v2/contracts/IWeightedPoolFactory.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../@balancer-labs/v2-interfaces/contracts/solidity-utils/openzeppelin/IERC20.sol",
+        "../@balancer-labs/v2-interfaces/contracts/pool-utils/IRateProvider.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IWeightedPoolFactory"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/vault/IBasePool.sol": {
+      "lastModificationDate": 1739181610217,
+      "contentHash": "9de185d7e0ea7bb886185711d1de3698",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/vault/IBasePool.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IVault.sol",
+        "./IPoolSwapStructs.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IBasePool"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/pool-utils/IRateProvider.sol": {
+      "lastModificationDate": 1739181610215,
+      "contentHash": "c9420bdeacd4455388050aca6ea89d53",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/pool-utils/IRateProvider.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IRateProvider"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/virtualPersona/IAgentToken.sol": {
+      "lastModificationDate": 1741407954017,
+      "contentHash": "2306afc95c8758f6e36fce4bfb5d015b",
+      "sourceName": "contracts/virtualPersona/IAgentToken.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "./IERC20Config.sol",
+        "./IErrors.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IAgentToken"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/virtualPersona/IAgentFactory.sol": {
+      "lastModificationDate": 1739181610228,
+      "contentHash": "aa6c5b2e96b4ab643f3da5b651ebb6b5",
+      "sourceName": "contracts/virtualPersona/IAgentFactory.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/governance/IGovernor.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IAgentFactory"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
+      "lastModificationDate": 1739250930522,
+      "contentHash": "c28aaa25d083a9a55bd9ec9e0b785122",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ContextUpgradeable"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts-upgradeable/access/Ownable2StepUpgradeable.sol": {
+      "lastModificationDate": 1739250930521,
+      "contentHash": "c14401b3899fa52b32a4cb2a1bd22126",
+      "sourceName": "@openzeppelin/contracts-upgradeable/access/Ownable2StepUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./OwnableUpgradeable.sol",
+        "../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Ownable2StepUpgradeable"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
+      "lastModificationDate": 1739250931889,
+      "contentHash": "f0cedd674b4863ee90d1521a92ab82df",
+      "sourceName": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Initializable"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/utils/structs/EnumerableSet.sol": {
+      "lastModificationDate": 1739250931854,
+      "contentHash": "872d28bbdd394a6754df33e82eaf1474",
+      "sourceName": "@openzeppelin/contracts/utils/structs/EnumerableSet.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "EnumerableSet"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol": {
+      "lastModificationDate": 1739250933227,
+      "contentHash": "effe88dd27f56305c4513f7aa9970ec9",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC20.sol",
+        "../../../interfaces/IERC1363.sol",
+        "../../../utils/Address.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SafeERC20"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/vault/IPoolSwapStructs.sol": {
+      "lastModificationDate": 1739181610217,
+      "contentHash": "a2c0d7e41d263b77821c7766a33b8bd8",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/vault/IPoolSwapStructs.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../solidity-utils/openzeppelin/IERC20.sol",
+        "./IVault.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IPoolSwapStructs"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/virtualPersona/IERC20Config.sol": {
+      "lastModificationDate": 1739181610229,
+      "contentHash": "fe6a949d21b9bd07239f0bf3dd7977c3",
+      "sourceName": "contracts/virtualPersona/IERC20Config.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IERC20Config"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/virtualPersona/IErrors.sol": {
+      "lastModificationDate": 1739181610229,
+      "contentHash": "22f335f9b1a7f2fbda95b06c49beddc3",
+      "sourceName": "contracts/virtualPersona/IErrors.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IErrors"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1739250931851,
+      "contentHash": "8f19f64d2adadf448840908bbaf431c8",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+      "lastModificationDate": 1739250933223,
+      "contentHash": "794db3115001aa372c79326fcfd44b1f",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC20Metadata"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/governance/IGovernor.sol": {
+      "lastModificationDate": 1739250930468,
+      "contentHash": "9357d5d69fc696dc7431939565a5c67c",
+      "sourceName": "@openzeppelin/contracts/governance/IGovernor.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IERC165.sol",
+        "../interfaces/IERC6372.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IGovernor"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/interfaces/IERC165.sol": {
+      "lastModificationDate": 1739250930498,
+      "contentHash": "f808b485ee0cdc6768ee8385ae5f9a2a",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": []
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/interfaces/IERC6372.sol": {
+      "lastModificationDate": 1739250930508,
+      "contentHash": "414cd6acf090e4009cf016ff62ecbd88",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC6372.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC6372"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+      "lastModificationDate": 1739250931855,
+      "contentHash": "bf0119eb2a570f219729ff38b6cd1df8",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC165"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol": {
+      "lastModificationDate": 1739250930521,
+      "contentHash": "77d30f3cd93f46b80b6f8f1ebc574ee4",
+      "sourceName": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/ContextUpgradeable.sol",
+        "../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "OwnableUpgradeable"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/interfaces/IERC1363.sol": {
+      "lastModificationDate": 1739250930496,
+      "contentHash": "6b7c5ee7a59c981072a804c99ab0fac9",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC1363.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol",
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC1363"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/utils/Address.sol": {
+      "lastModificationDate": 1739250930468,
+      "contentHash": "553fc9ae17d9c00fd1c301b760781e26",
+      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Errors.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/interfaces/IERC20.sol": {
+      "lastModificationDate": 1739250930499,
+      "contentHash": "79af12d64eacc7d77b9ee2ac4b4d51ee",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../token/ERC20/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": []
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/utils/Errors.sol": {
+      "lastModificationDate": 1739250930468,
+      "contentHash": "6b5eac2b85500c3012977849cfd633d8",
+      "sourceName": "@openzeppelin/contracts/utils/Errors.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Errors"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/proxy/ERC1967/ERC1967Utils.sol": {
+      "lastModificationDate": 1739250931852,
+      "contentHash": "405dda10d03b5eabd05700d23cc601ec",
+      "sourceName": "@openzeppelin/contracts/proxy/ERC1967/ERC1967Utils.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../beacon/IBeacon.sol",
+        "../../interfaces/IERC1967.sol",
+        "../../utils/Address.sol",
+        "../../utils/StorageSlot.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.21"
+      ],
+      "artifacts": [
+        "ERC1967Utils"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/interfaces/IERC1967.sol": {
+      "lastModificationDate": 1739250930498,
+      "contentHash": "4e17c826a54a8ee1a185449d4695d07d",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC1967.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC1967"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/utils/StorageSlot.sol": {
+      "lastModificationDate": 1739250930485,
+      "contentHash": "e656d64c4ce918f3d13030b91c935134",
+      "sourceName": "@openzeppelin/contracts/utils/StorageSlot.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "StorageSlot"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/proxy/beacon/IBeacon.sol": {
+      "lastModificationDate": 1739250931852,
+      "contentHash": "0a5c323fd908535580597848b8e550fb",
+      "sourceName": "@openzeppelin/contracts/proxy/beacon/IBeacon.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IBeacon"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/proxy/transparent/TransparentUpgradeableProxy.sol": {
+      "lastModificationDate": 1739250931852,
+      "contentHash": "590d996fc7a20c09841f7d1c0dce7aaa",
+      "sourceName": "@openzeppelin/contracts/proxy/transparent/TransparentUpgradeableProxy.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../ERC1967/ERC1967Utils.sol",
+        "../ERC1967/ERC1967Proxy.sol",
+        "../../interfaces/IERC1967.sol",
+        "./ProxyAdmin.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ITransparentUpgradeableProxy",
+        "TransparentUpgradeableProxy"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/proxy/transparent/ProxyAdmin.sol": {
+      "lastModificationDate": 1739250931852,
+      "contentHash": "b96b9abe7393a6eb20528d70e7af9fad",
+      "sourceName": "@openzeppelin/contracts/proxy/transparent/ProxyAdmin.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./TransparentUpgradeableProxy.sol",
+        "../../access/Ownable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ProxyAdmin"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/proxy/ERC1967/ERC1967Proxy.sol": {
+      "lastModificationDate": 1739250931852,
+      "contentHash": "50db9cb02db403252c427d216aa6007f",
+      "sourceName": "@openzeppelin/contracts/proxy/ERC1967/ERC1967Proxy.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../Proxy.sol",
+        "./ERC1967Utils.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC1967Proxy"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1739250930467,
+      "contentHash": "d3c790edc9ccf808a17c5a6cd13614fd",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1739250930468,
+      "contentHash": "67bfbc07588eb8683b3fd8f6f909563e",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/proxy/Proxy.sol": {
+      "lastModificationDate": 1739250930468,
+      "contentHash": "35308c2fa7be99a959494c37e8257c16",
+      "sourceName": "@openzeppelin/contracts/proxy/Proxy.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Proxy"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+      "lastModificationDate": 1739250931851,
+      "contentHash": "38910c3dfa5e3778fac8888b1d714084",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol",
+        "./extensions/IERC20Metadata.sol",
+        "../../utils/Context.sol",
+        "../../interfaces/draft-IERC6093.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/interfaces/draft-IERC6093.sol": {
+      "lastModificationDate": 1739250930509,
+      "contentHash": "267d92fe4de67b1bdb3302c08f387dbf",
+      "sourceName": "@openzeppelin/contracts/interfaces/draft-IERC6093.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC1155Errors",
+        "IERC20Errors",
+        "IERC721Errors"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol": {
+      "lastModificationDate": 1739250931889,
+      "contentHash": "1e1a4970502bc2f46f20ef5bc446abd3",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "../../utils/ContextUpgradeable.sol",
+        "@openzeppelin/contracts/interfaces/draft-IERC6093.sol",
+        "../../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC20Upgradeable"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol": {
+      "lastModificationDate": 1739250931890,
+      "contentHash": "61838d7249e45e3941fc2a45d1091448",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "../../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC165Upgradeable"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts-upgradeable/utils/PausableUpgradeable.sol": {
+      "lastModificationDate": 1739250930524,
+      "contentHash": "ef20fd32f5bdcc50bd466abc8fc7f181",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/PausableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/ContextUpgradeable.sol",
+        "../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "PausableUpgradeable"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/virtualPersona/AgentFactoryV3.sol": {
+      "lastModificationDate": 1741407240760,
+      "contentHash": "f8e0e651c0f3fee28c0ebdabfb1239ba",
+      "sourceName": "contracts/virtualPersona/AgentFactoryV3.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/proxy/Clones.sol",
+        "@openzeppelin/contracts/governance/IGovernor.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/PausableUpgradeable.sol",
+        "./IAgentFactoryV3.sol",
+        "./IAgentToken.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "AgentFactoryV3"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/virtualPersona/IAgentFactoryV3.sol": {
+      "lastModificationDate": 1739181610228,
+      "contentHash": "d7c5027e2eadefff565875d5f4e2572c",
+      "sourceName": "contracts/virtualPersona/IAgentFactoryV3.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/governance/IGovernor.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IAgentFactoryV3"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/proxy/Clones.sol": {
+      "lastModificationDate": 1739250930468,
+      "contentHash": "a8d4465182e22756eda9cb6bd5395bef",
+      "sourceName": "@openzeppelin/contracts/proxy/Clones.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Errors.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Clones"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol": {
+      "lastModificationDate": 1739250930521,
+      "contentHash": "61a6b098d98b3b945beb7d9de481c025",
+      "sourceName": "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/IAccessControl.sol",
+        "../utils/ContextUpgradeable.sol",
+        "../utils/introspection/ERC165Upgradeable.sol",
+        "../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "AccessControlUpgradeable"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/access/IAccessControl.sol": {
+      "lastModificationDate": 1739250930467,
+      "contentHash": "6f7fac9fa0df6004375e18b7ff7edf4e",
+      "sourceName": "@openzeppelin/contracts/access/IAccessControl.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IAccessControl"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/fun/FRouter.sol": {
+      "lastModificationDate": 1739181610227,
+      "contentHash": "dd0be6edcac7dd9b6dde7b9ee5cace60",
+      "sourceName": "contracts/fun/FRouter.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+        "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol",
+        "./FFactory.sol",
+        "./IFPair.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "FRouter"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/fun/FFactory.sol": {
+      "lastModificationDate": 1739181610227,
+      "contentHash": "a411879625d6e090d148f4e61ca91506",
+      "sourceName": "contracts/fun/FFactory.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol",
+        "./FPair.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "FFactory"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/fun/IFPair.sol": {
+      "lastModificationDate": 1739181610227,
+      "contentHash": "16e26cdb882c01cdc46ae894a31026d4",
+      "sourceName": "contracts/fun/IFPair.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IFPair"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol": {
+      "lastModificationDate": 1739250930524,
+      "contentHash": "24562076b21756e3358ede5e844008ce",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ReentrancyGuardUpgradeable"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/fun/FPair.sol": {
+      "lastModificationDate": 1739181610227,
+      "contentHash": "a906a9f4564fcb61ac33454d6b3da0d9",
+      "sourceName": "contracts/fun/FPair.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/ReentrancyGuard.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+        "./IFPair.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "FPair"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/node_modules/@openzeppelin/contracts/utils/ReentrancyGuard.sol": {
+      "lastModificationDate": 1739250930469,
+      "contentHash": "190613e556d509d9e9a0ea43dc5d891d",
+      "sourceName": "@openzeppelin/contracts/utils/ReentrancyGuard.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ReentrancyGuard"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/fun/Bonding.sol": {
+      "lastModificationDate": 1741410877328,
+      "contentHash": "ca01a68561cf3def84c8691f1b250aa4",
+      "sourceName": "contracts/fun/Bonding.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/ReentrancyGuard.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+        "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol",
+        "./FFactory.sol",
+        "./IFPair.sol",
+        "./FRouter.sol",
+        "./FERC20.sol",
+        "../virtualPersona/IAgentFactoryV3.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "Bonding"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/fun/FERC20.sol": {
+      "lastModificationDate": 1739251907406,
+      "contentHash": "d46d2da1c588f6d5aa9b2d9a9c311dc0",
+      "sourceName": "contracts/fun/FERC20.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "FERC20"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/example/MyTokenV1.sol": {
+      "lastModificationDate": 1739261901903,
+      "contentHash": "489c819811790c1df6bcba2e9f7e2124",
+      "sourceName": "contracts/example/MyTokenV1.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "MyTokenV1"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/example/MyTokenV2.sol": {
+      "lastModificationDate": 1739181610224,
+      "contentHash": "6996e32bbe12d67e7b0220affe6a6a9b",
+      "sourceName": "contracts/example/MyTokenV2.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./MyTokenV1.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "MyTokenV2"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/example/MockErc20.sol": {
+      "lastModificationDate": 1739181610223,
+      "contentHash": "887635d686dc99ff14145cf0ebe69a70",
+      "sourceName": "contracts/example/MockErc20.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol"
+      ],
+      "versionPragmas": [
+        "0.8.28"
+      ],
+      "artifacts": [
+        "MockErc20"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/proxy/DProxyAdmin.sol": {
+      "lastModificationDate": 1739181610227,
+      "contentHash": "30cd49e9294343c30b42f33033555b14",
+      "sourceName": "contracts/proxy/DProxyAdmin.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/proxy/transparent/ProxyAdmin.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": []
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/proxy/DProxy.sol": {
+      "lastModificationDate": 1739181610227,
+      "contentHash": "e6ee2aef46b1f26c9fe0231cb952d2df",
+      "sourceName": "contracts/proxy/DProxy.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/proxy/transparent/TransparentUpgradeableProxy.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": []
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/contracts/WeightedPoolProtocolFees.sol": {
+      "lastModificationDate": 1739181610223,
+      "contentHash": "6edbd724022ffa314d233ed0ca808c0e",
+      "sourceName": "contracts/dexPool/balancer-v2/contracts/WeightedPoolProtocolFees.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../@balancer-labs/v2-interfaces/contracts/pool-utils/IRateProvider.sol",
+        "../@balancer-labs/v2-pool-utils/contracts/protocol-fees/ProtocolFeeCache.sol",
+        "../@balancer-labs/v2-pool-utils/contracts/protocol-fees/InvariantGrowthProtocolSwapFees.sol",
+        "./BaseWeightedPool.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "WeightedPoolProtocolFees"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-pool-utils/contracts/protocol-fees/ProtocolFeeCache.sol": {
+      "lastModificationDate": 1739181610219,
+      "contentHash": "8c3ba615c333e9c3eb77170798f25029",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-pool-utils/contracts/protocol-fees/ProtocolFeeCache.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../../@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/BalancerErrors.sol",
+        "../../../../@balancer-labs/v2-interfaces/contracts/standalone-utils/IProtocolFeePercentagesProvider.sol",
+        "../../../../@balancer-labs/v2-solidity-utils/contracts/openzeppelin/SafeCast.sol",
+        "../RecoveryMode.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "ProtocolFeeCache"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-pool-utils/contracts/protocol-fees/InvariantGrowthProtocolSwapFees.sol": {
+      "lastModificationDate": 1739181610219,
+      "contentHash": "e7cb0d96ee74247a4b5c92cfeeb06623",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-pool-utils/contracts/protocol-fees/InvariantGrowthProtocolSwapFees.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../../@balancer-labs/v2-solidity-utils/contracts/math/FixedPoint.sol",
+        "../../../../@balancer-labs/v2-solidity-utils/contracts/math/Math.sol",
+        "./ProtocolFees.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "InvariantGrowthProtocolSwapFees"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/contracts/BaseWeightedPool.sol": {
+      "lastModificationDate": 1739181610221,
+      "contentHash": "83b67be2bd8df703fcca776b92a0c78b",
+      "sourceName": "contracts/dexPool/balancer-v2/contracts/BaseWeightedPool.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../@balancer-labs/v2-interfaces/contracts/pool-weighted/WeightedPoolUserData.sol",
+        "../@balancer-labs/v2-solidity-utils/contracts/math/FixedPoint.sol",
+        "../@balancer-labs/v2-solidity-utils/contracts/helpers/InputHelpers.sol",
+        "../@balancer-labs/v2-pool-utils/contracts/BaseMinimalSwapInfoPool.sol",
+        "./WeightedMath.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "BaseWeightedPool"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-pool-utils/contracts/RecoveryMode.sol": {
+      "lastModificationDate": 1739181610218,
+      "contentHash": "2626c1d9fbbf6a0e083dbc283ac4b257",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-pool-utils/contracts/RecoveryMode.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/BalancerErrors.sol",
+        "../../../@balancer-labs/v2-interfaces/contracts/pool-utils/BasePoolUserData.sol",
+        "../../../@balancer-labs/v2-interfaces/contracts/pool-utils/IRecoveryMode.sol",
+        "../../../@balancer-labs/v2-solidity-utils/contracts/math/FixedPoint.sol",
+        "./BasePoolAuthorization.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "RecoveryMode"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/pool-utils/BasePoolUserData.sol": {
+      "lastModificationDate": 1739181610214,
+      "contentHash": "594113e35d85fe980601d1307aec1cca",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/pool-utils/BasePoolUserData.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "BasePoolUserData"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/pool-utils/IRecoveryMode.sol": {
+      "lastModificationDate": 1739181610215,
+      "contentHash": "820abd51d3ab4a2f8dd3b6a95d527ee4",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/pool-utils/IRecoveryMode.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IRecoveryMode"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/math/FixedPoint.sol": {
+      "lastModificationDate": 1739181610220,
+      "contentHash": "fac41ca1087cfbe85f4b69a85e005b40",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/math/FixedPoint.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../../@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/BalancerErrors.sol",
+        "./LogExpMath.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "FixedPoint"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-pool-utils/contracts/BasePoolAuthorization.sol": {
+      "lastModificationDate": 1739181610218,
+      "contentHash": "4057d8e0ef4699acc1e1c2c669734d67",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-pool-utils/contracts/BasePoolAuthorization.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../@balancer-labs/v2-interfaces/contracts/vault/IAuthorizer.sol",
+        "../../../@balancer-labs/v2-solidity-utils/contracts/helpers/Authentication.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "BasePoolAuthorization"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/math/LogExpMath.sol": {
+      "lastModificationDate": 1739181610220,
+      "contentHash": "03ecf3cdfe889b2a52be6394ad55ba25",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/math/LogExpMath.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../../@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/BalancerErrors.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "LogExpMath"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/math/Math.sol": {
+      "lastModificationDate": 1739181610220,
+      "contentHash": "7fa407c62fb9de662526c9c0843353c1",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/math/Math.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../../@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/BalancerErrors.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "Math"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-pool-utils/contracts/protocol-fees/ProtocolFees.sol": {
+      "lastModificationDate": 1739181610219,
+      "contentHash": "ec61867d0a0edfbd3bf9dda9b6251ee3",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-pool-utils/contracts/protocol-fees/ProtocolFees.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../../@balancer-labs/v2-solidity-utils/contracts/math/FixedPoint.sol",
+        "../../../../@balancer-labs/v2-solidity-utils/contracts/math/Math.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "ProtocolFees"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/pool-weighted/WeightedPoolUserData.sol": {
+      "lastModificationDate": 1739181610215,
+      "contentHash": "387745d1d4b1e382f348a9353aabc829",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/pool-weighted/WeightedPoolUserData.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../solidity-utils/openzeppelin/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "WeightedPoolUserData"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/helpers/InputHelpers.sol": {
+      "lastModificationDate": 1739181610219,
+      "contentHash": "52d11dc390367b6e064ce8f99b75b1ea",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/helpers/InputHelpers.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../../@balancer-labs/v2-interfaces/contracts/solidity-utils/openzeppelin/IERC20.sol",
+        "../../../../@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/BalancerErrors.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "InputHelpers"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-pool-utils/contracts/BaseMinimalSwapInfoPool.sol": {
+      "lastModificationDate": 1739181610218,
+      "contentHash": "7753e8be8d4f4f5048ad4357a3d51a99",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-pool-utils/contracts/BaseMinimalSwapInfoPool.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../@balancer-labs/v2-interfaces/contracts/vault/IMinimalSwapInfoPool.sol",
+        "./BasePool.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "BaseMinimalSwapInfoPool"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/contracts/WeightedMath.sol": {
+      "lastModificationDate": 1739181610223,
+      "contentHash": "26381b3d5207399dd2fa9d99845c8796",
+      "sourceName": "contracts/dexPool/balancer-v2/contracts/WeightedMath.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../@balancer-labs/v2-solidity-utils/contracts/helpers/InputHelpers.sol",
+        "../@balancer-labs/v2-solidity-utils/contracts/math/FixedPoint.sol",
+        "../@balancer-labs/v2-solidity-utils/contracts/math/Math.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "WeightedMath"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/vault/IMinimalSwapInfoPool.sol": {
+      "lastModificationDate": 1739181610217,
+      "contentHash": "91ee79d29cc35816db989572420eccec",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/vault/IMinimalSwapInfoPool.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IBasePool.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IMinimalSwapInfoPool"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-pool-utils/contracts/BasePool.sol": {
+      "lastModificationDate": 1739181610218,
+      "contentHash": "f2b9f6874115c2f641c8fd11f92579e6",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-pool-utils/contracts/BasePool.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../@balancer-labs/v2-interfaces/contracts/pool-utils/IAssetManager.sol",
+        "../../../@balancer-labs/v2-interfaces/contracts/pool-utils/IControlledPool.sol",
+        "../../../@balancer-labs/v2-interfaces/contracts/vault/IVault.sol",
+        "../../../@balancer-labs/v2-interfaces/contracts/vault/IBasePool.sol",
+        "../../../@balancer-labs/v2-solidity-utils/contracts/helpers/InputHelpers.sol",
+        "../../../@balancer-labs/v2-solidity-utils/contracts/helpers/WordCodec.sol",
+        "../../../@balancer-labs/v2-solidity-utils/contracts/helpers/TemporarilyPausable.sol",
+        "../../../@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ERC20.sol",
+        "../../../@balancer-labs/v2-solidity-utils/contracts/math/FixedPoint.sol",
+        "../../../@balancer-labs/v2-solidity-utils/contracts/math/Math.sol",
+        "./BalancerPoolToken.sol",
+        "./BasePoolAuthorization.sol",
+        "./RecoveryMode.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "BasePool"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/pool-utils/IAssetManager.sol": {
+      "lastModificationDate": 1739181610215,
+      "contentHash": "a86e524340481f1cf0415784f3c29fbe",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/pool-utils/IAssetManager.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../solidity-utils/openzeppelin/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IAssetManager"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/pool-utils/IControlledPool.sol": {
+      "lastModificationDate": 1739181610215,
+      "contentHash": "e0550b4d4c7bc3f7454cccc8b2da2407",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/pool-utils/IControlledPool.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../solidity-utils/openzeppelin/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IControlledPool"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/helpers/WordCodec.sol": {
+      "lastModificationDate": 1739181610220,
+      "contentHash": "e29be2715d0853c2d0f933df93358fd7",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/helpers/WordCodec.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../../@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/BalancerErrors.sol",
+        "../math/Math.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "WordCodec"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/helpers/TemporarilyPausable.sol": {
+      "lastModificationDate": 1739181610220,
+      "contentHash": "f3cde399de409cb9775fa8e254bd7a76",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/helpers/TemporarilyPausable.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../../@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/BalancerErrors.sol",
+        "../../../../@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/ITemporarilyPausable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "TemporarilyPausable"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-pool-utils/contracts/BalancerPoolToken.sol": {
+      "lastModificationDate": 1739181610218,
+      "contentHash": "bf7ecb6436404fb52050d5b8fead6e38",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-pool-utils/contracts/BalancerPoolToken.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../@balancer-labs/v2-interfaces/contracts/vault/IVault.sol",
+        "../../../@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ERC20Permit.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "BalancerPoolToken"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/contracts/WeightedPool.sol": {
+      "lastModificationDate": 1739181610223,
+      "contentHash": "a5d5960a2abcd302966d73690fde71e1",
+      "sourceName": "contracts/dexPool/balancer-v2/contracts/WeightedPool.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./BaseWeightedPool.sol",
+        "./WeightedPoolProtocolFees.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "WeightedPool"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/contracts/WeightedPoolFactory.sol": {
+      "lastModificationDate": 1739181610223,
+      "contentHash": "72c043540bd578fd038fe6ec9125a62f",
+      "sourceName": "contracts/dexPool/balancer-v2/contracts/WeightedPoolFactory.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../@balancer-labs/v2-interfaces/contracts/vault/IVault.sol",
+        "../@balancer-labs/v2-pool-utils/contracts/factories/BasePoolFactory.sol",
+        "../@balancer-labs/v2-pool-utils/contracts/factories/FactoryWidePauseWindow.sol",
+        "./WeightedPool.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "WeightedPoolFactory"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-pool-utils/contracts/factories/BasePoolFactory.sol": {
+      "lastModificationDate": 1739181610218,
+      "contentHash": "23a3e42900a650aa5c5118a0f32770ba",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-pool-utils/contracts/factories/BasePoolFactory.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../../@balancer-labs/v2-interfaces/contracts/vault/IVault.sol",
+        "../../../../@balancer-labs/v2-interfaces/contracts/standalone-utils/IProtocolFeePercentagesProvider.sol",
+        "../../../../@balancer-labs/v2-interfaces/contracts/pool-utils/IBasePoolFactory.sol",
+        "../../../../@balancer-labs/v2-solidity-utils/contracts/helpers/BaseSplitCodeFactory.sol",
+        "../../../../@balancer-labs/v2-solidity-utils/contracts/helpers/SingletonAuthentication.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "BasePoolFactory"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-pool-utils/contracts/factories/FactoryWidePauseWindow.sol": {
+      "lastModificationDate": 1739181610218,
+      "contentHash": "b735ccd46a073ae3370377debf24b3a3",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-pool-utils/contracts/factories/FactoryWidePauseWindow.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "FactoryWidePauseWindow"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/pool-utils/IBasePoolFactory.sol": {
+      "lastModificationDate": 1739181610215,
+      "contentHash": "c8da645c432723234531f0405e7c173d",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/pool-utils/IBasePoolFactory.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../solidity-utils/helpers/IAuthentication.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IBasePoolFactory"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/helpers/BaseSplitCodeFactory.sol": {
+      "lastModificationDate": 1739181610219,
+      "contentHash": "7f4a9f65c380abeba36af464393a6b0a",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/helpers/BaseSplitCodeFactory.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./CodeDeployer.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "BaseSplitCodeFactory"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/helpers/CodeDeployer.sol": {
+      "lastModificationDate": 1739181610219,
+      "contentHash": "302f9f9e25954a825b9702e23d733dd2",
+      "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/helpers/CodeDeployer.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../../@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/BalancerErrors.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "CodeDeployer"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/virtualPersona/IKuru.sol": {
+      "lastModificationDate": 1741333944067,
+      "contentHash": "94421e8f33fd8e086f4241935d2dedf9",
+      "sourceName": "contracts/virtualPersona/IKuru.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IDepositContract",
+        "IKuruRouter",
+        "IKuruVault",
+        "IOrderBook"
+      ]
+    },
+    "/Users/yihsiu/Sakaba-Projects/monad-fun/contracts/testingKuru/TestKuru.sol": {
+      "lastModificationDate": 1741592215061,
+      "contentHash": "5e2cf4628af350b36780c4bbe6398e74",
+      "sourceName": "contracts/testingKuru/TestKuru.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+        "../virtualPersona/IKuru.sol"
+      ],
+      "versionPragmas": [
+        "0.8.28"
+      ],
+      "artifacts": [
+        "TestKuru"
+      ]
+    }
+  }
+}

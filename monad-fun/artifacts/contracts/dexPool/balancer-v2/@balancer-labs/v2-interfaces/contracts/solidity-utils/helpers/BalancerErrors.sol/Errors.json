@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "Errors",
+  "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/solidity-utils/helpers/BalancerErrors.sol",
+  "abi": [],
+  "bytecode": "0x60808060405234601757603a9081601d823930815050f35b600080fdfe600080fdfea264697066735822122064368ab5a6e86ddb0555d62005e127dce031a20f0b4445cfca3a292cf950ff1964736f6c634300081c0033",
+  "deployedBytecode": "0x600080fdfea264697066735822122064368ab5a6e86ddb0555d62005e127dce031a20f0b4445cfca3a292cf950ff1964736f6c634300081c0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

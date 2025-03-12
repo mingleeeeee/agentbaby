@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "WeightedPoolUserData",
+  "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/pool-weighted/WeightedPoolUserData.sol",
+  "abi": [],
+  "bytecode": "0x60808060405234601757603a9081601d823930815050f35b600080fdfe600080fdfea264697066735822122034e680323dd26af50e4893434a13b932e5947c9cdc7334b4427df052ef94171e64736f6c634300081c0033",
+  "deployedBytecode": "0x600080fdfea264697066735822122034e680323dd26af50e4893434a13b932e5947c9cdc7334b4427df052ef94171e64736f6c634300081c0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "WeightedMath",
+  "sourceName": "contracts/dexPool/balancer-v2/contracts/WeightedMath.sol",
+  "abi": [],
+  "bytecode": "0x60808060405234601757603a9081601d823930815050f35b600080fdfe600080fdfea2646970667358221220541e6786c3fa738f2c2e48e84c4fb52d1ea71e166290c41c68062e12690cc51664736f6c634300081c0033",
+  "deployedBytecode": "0x600080fdfea2646970667358221220541e6786c3fa738f2c2e48e84c4fb52d1ea71e166290c41c68062e12690cc51664736f6c634300081c0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

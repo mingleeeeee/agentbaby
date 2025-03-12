@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "Math",
+  "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-solidity-utils/contracts/math/Math.sol",
+  "abi": [],
+  "bytecode": "0x60808060405234601757603a9081601d823930815050f35b600080fdfe600080fdfea2646970667358221220966389048a5fe1e6a487f6253fffe542a8e7a7087ffad2781c0271f4f93e7ebd64736f6c634300081c0033",
+  "deployedBytecode": "0x600080fdfea2646970667358221220966389048a5fe1e6a487f6253fffe542a8e7a7087ffad2781c0271f4f93e7ebd64736f6c634300081c0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

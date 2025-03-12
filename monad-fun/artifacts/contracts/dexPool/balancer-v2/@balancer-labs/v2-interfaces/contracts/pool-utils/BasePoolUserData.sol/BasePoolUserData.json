@@ -1,0 +1,24 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "BasePoolUserData",
+  "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-interfaces/contracts/pool-utils/BasePoolUserData.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "RECOVERY_MODE_EXIT_KIND",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080806040523460175760759081601d823930815050f35b600080fdfe6080806040526004361015601257600080fd5b60003560e01c6309564cb114602657600080fd5b6000366003190112603a578060ff60209252f35b600080fdfea264697066735822122054dba268d49b2cc4797d06e3e7b0aa365d9d3f569f4c28ab99efd06a9e5df4ad64736f6c634300081c0033",
+  "deployedBytecode": "0x6080806040526004361015601257600080fd5b60003560e01c6309564cb114602657600080fd5b6000366003190112603a578060ff60209252f35b600080fdfea264697066735822122054dba268d49b2cc4797d06e3e7b0aa365d9d3f569f4c28ab99efd06a9e5df4ad64736f6c634300081c0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

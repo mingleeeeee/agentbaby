@@ -1,0 +1,78 @@
+const ethers = require('ethers');
+const { defaultAbiCoder } = require('@ethersproject/abi');
+const { JsonRpcProvider } = require('@ethersproject/providers');
+const weightedPoolFactoryAbi = require('@app/abi/WeightedPoolFactory.json');
+const vaultAbi = require('@app/abi/Vault.json');
+
+const test = async () => {
+  const zeroAddress = '0x0000000000000000000000000000000000000000';
+
+  const TOKEN0 = '0x6B382742B07AABBA58C38D792B5D7CBAAB246E99';
+  const TOKEN1 = '0xE34EEC955BF457382CE37E1D8371E559CC6518FB';
+
+  const provider = new JsonRpcProvider('https://rpc-testnet.defi-verse.org/');
+  const signerPrivateKey =
+    '2064ba013e066353b400c91dbfd9048b261405c8805c72b8713130f3c99fdd20';
+  const signer = new ethers.Wallet(signerPrivateKey, provider);
+
+  // Create pool
+  {
+    const args = [
+      'Token0_Token1',
+      'Token0_Token1_Pool',
+      [TOKEN0, TOKEN1], // address
+      ['500000000000000000', '500000000000000000'], // 0.5 : 0.5
+      [zeroAddress, zeroAddress],
+      '10000000000000000', // swapFeePercentage = 1%
+      '0xBA1BA1ba1BA1bA1bA1Ba1BA1ba1BA1bA1ba1ba1B', // owner
+    ];
+
+    const weightedPoolFactory = new ethers.Contract(
+      '0x48494Fa9eAd46EE8E3FcB66487a6dBBD34DcAFe3', // WeightedPoolFactory
+      weightedPoolFactoryAbi,
+      signer
+    );
+
+    console.log('create pool args:', args);
+    const rs = await weightedPoolFactory.create(...args);
+    console.log('create pool tx:', rs);
+  }
+
+  // Join pool
+  {
+    const INIT = 0;
+    const EXACT_TOKENS_IN_FOR_BPT_OUT = 1;
+    const TOKEN_IN_FOR_EXACT_BPT_OUT = 2;
+    const ALL_TOKENS_IN_FOR_EXACT_BPT_OUT = 3;
+
+    const amountsIn = ['50000000000000000000', '50000000000000000000']; // 50 x 10^18
+    const userData = defaultAbiCoder.encode(
+      ['uint256', 'uint256[]'],
+      [INIT, amountsIn]
+    );
+
+    const args = [
+      '0x71c70a0305b021985daa0f04cf01f40ff653e831000200000000000000000028', // pool id
+      '0x68C297EDdd953961E81532202e48b048e459c7c3', // joiner
+      '0x68C297EDdd953961E81532202e48b048e459c7c3', // joiner
+      {
+        assets: [TOKEN0, TOKEN1],
+        maxAmountsIn: amountsIn,
+        userData: userData,
+        fromInternalBalance: false,
+      },
+    ];
+
+    const vault = new ethers.Contract(
+      '0x2Da016a77E290fb82F5af7051198304d57779f5d',
+      vaultAbi,
+      signer
+    );
+
+    console.log('joinPool args:', args);
+    const rs = await vault.joinPool(...args, {
+      value: '50000000000000000000', // require if TOKEN0 or TOKEN1 are native token
+    });
+    console.log('joinPool tx:', rs);
+  }
+}

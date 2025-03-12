@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "InvariantGrowthProtocolSwapFees",
+  "sourceName": "contracts/dexPool/balancer-v2/@balancer-labs/v2-pool-utils/contracts/protocol-fees/InvariantGrowthProtocolSwapFees.sol",
+  "abi": [],
+  "bytecode": "0x60808060405234601757603a9081601d823930815050f35b600080fdfe600080fdfea26469706673582212205ce00a5e39e9f51ef2ded78c2b80eb81c063d2ea71212c2af6345d53b1440d1564736f6c634300081c0033",
+  "deployedBytecode": "0x600080fdfea26469706673582212205ce00a5e39e9f51ef2ded78c2b80eb81c063d2ea71212c2af6345d53b1440d1564736f6c634300081c0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
