@@ -119,6 +119,16 @@ textarea {
   max-width: 400px;
 }
 
+.input-token-info {
+  width: 90%;
+  max-width: 400px;
+  padding: 14px;
+  margin: 10px 0; 
+  font-size: 16px;
+  border-radius: 5px;
+  text-align: left; 
+}
+
 /* ✅ Ensure uniform spacing for inputs */
 input, textarea {
   width: 100%;
@@ -313,6 +323,7 @@ button:hover {
 .swap-btn.active:hover {
   background: #b88665; /* 深焦糖 */
 }
+
 
 
 /* ✅ Swap 手續費顯示 */
