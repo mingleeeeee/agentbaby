@@ -1,0 +1,13 @@
+yarn run v1.22.22
+$ next dev --turbopack --port 3000 --hostname 0.0.0.0
+ ⨯ Failed to start server
+Error: listen EADDRINUSE: address already in use 0.0.0.0:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use 0.0.0.0:3000) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 3000
+}
+[?25h
+Done in 1.28s.

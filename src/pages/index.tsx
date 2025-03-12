@@ -18,7 +18,7 @@ import { useTokenAllowance } from "@/blockchain/useTokenAllowance";
 export default function Home() {
   const defaultAvatar = "mascotImage.webp";
   const [character, setCharacter] = useState({
-    name: "Monado",
+    name: "The Agent Baby",
     avatar: "",
     personality: "Intelligent, wise, and mysterious",
     description:
@@ -185,7 +185,7 @@ export default function Home() {
           value={character.name}
           onChange={handleChange}
         />
-        <p className="example-text">Example: Monado</p>
+        <p className="example-text">Example: The Agent Baby</p>
 
         <label className="input-title">Personality</label>
         <textarea
@@ -253,15 +253,19 @@ export default function Home() {
           Example: Visionary, Intelligent, Mysterious, Enlightening
         </p>
 
-        {/* Start/Stop AI Buttons */}
-        <button onClick={isRunning ? stopAI : startAI} disabled={loading}>
-          {loading ? "Processing..." : isRunning ? "Stop AI" : "Start AI"}
-        </button>
-        <Link href="user" className="general-btn">View User Page</Link>
+       
       </div>
       <div>
         <ConnectWalletButton address={address} isConnected={isConnected} />
+         {/* Start/Stop AI Buttons */}
+         <div><button onClick={isRunning ? stopAI : startAI} disabled={loading}>
+          {loading ? "Processing..." : isRunning ? "Stop AI" : "Start AI"}
+        </button>
+        <div style={{ marginTop: "20px" }}>
+        <Link href="user" className="general-btn">View User Page</Link></div></div>
+         
       </div>
+      
       
       
     </div>

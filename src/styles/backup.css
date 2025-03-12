@@ -508,8 +508,8 @@ button:hover {
   font-weight: bold;
   cursor: pointer;
   margin-top: 12px; /* 一點距離 */
-  width: 93.5%; /* 與其他按鈕相同 */
-  max-width: 400px; /* 保持一致 */
+  width: 91.5%; /* 與其他按鈕相同 */
+  max-width: 500px; /* 保持一致 */
   text-align: center;
   box-shadow: 0 2px 4px rgba(90, 74, 66, 0.2); /* 微陰影 */
   transition: background 0.3s, color 0.3s;
@@ -544,4 +544,3 @@ button:hover {
   background: #b88665; /* Hover 焦糖 */
   color: white;
 }
-

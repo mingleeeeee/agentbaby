@@ -1,0 +1,84 @@
+nohup: ignoring input
+yarn run v1.22.22
+$ next dev --turbopack
+   ▲ Next.js 15.2.1 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://172.31.44.106:3000
+   - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 1268ms
+ ○ Compiling / ...
+ ✓ Compiled / in 18.8s
+ GET / 200 in 11619ms
+ GET / 200 in 21805ms
+(node:114280) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ ○ Compiling /user ...
+ ✓ Compiled /user in 9.2s
+ ✓ Compiled /api/tweets in 102ms
+ GET /api/tweets 200 in 47ms
+ GET /api/tweets 304 in 49ms
+ GET / 200 in 139ms
+ GET / 200 in 135ms
+ GET / 200 in 49ms
+ GET / 200 in 125ms
+ GET / 200 in 69ms
+ GET / 200 in 127ms
+ GET / 200 in 63ms
+ ✓ Compiled in 208ms
+ GET / 200 in 47ms
+ ✓ Compiled in 44ms
+ GET / 200 in 54ms
+ ✓ Compiled in 74ms
+ ✓ Compiled in 76ms
+ ✓ Compiled in 59ms
+ ✓ Compiled in 47ms
+ ✓ Compiled in 57ms
+ ✓ Compiled in 62ms
+ GET / 200 in 71ms
+ ✓ Compiled in 50ms
+ ✓ Compiled in 58ms
+ ✓ Compiled in 43ms
+ ✓ Compiled in 65ms
+ ✓ Compiled in 60ms
+ ✓ Compiled in 52ms
+ GET / 200 in 55ms
+ ✓ Compiled in 64ms
+ GET / 200 in 55ms
+ ✓ Compiled in 45ms
+ GET / 200 in 73ms
+ ✓ Compiled in 1011ms
+ GET / 200 in 1292ms
+ ✓ Compiled in 1054ms
+ ✓ Compiled in 98ms
+ ✓ Compiled in 68ms
+ GET / 200 in 1712ms
+ ✓ Compiled in 64ms
+ GET / 200 in 1816ms
+ ✓ Compiled in 57ms
+ ✓ Compiled in 48ms
+ ✓ Compiled in 52ms
+ GET / 200 in 1672ms
+ ✓ Compiled in 55ms
+ ✓ Compiled in 66ms
+ GET / 200 in 1334ms
+ GET /api/tweets 304 in 33ms
+ GET /api/tweets 304 in 14ms
+ ✓ Compiled in 145ms
+ GET / 200 in 81ms
+ ✓ Compiled in 71ms
+ GET / 200 in 49ms
+ ✓ Compiled in 50ms
+ GET / 200 in 50ms
+ ✓ Compiled in 65ms
+ GET / 200 in 135ms
+ ✓ Compiled in 60ms
+ GET / 200 in 57ms
+ ✓ Compiled in 85ms
+ GET / 200 in 55ms
+ ✓ Compiled in 44ms
+ GET / 200 in 94ms
+ GET / 200 in 67ms
+ GET / 200 in 62ms
+[?25h

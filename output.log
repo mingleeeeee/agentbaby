@@ -1,0 +1,16 @@
+nohup: ignoring input
+yarn run v1.22.22
+$ next dev --turbopack --port 3000 --hostname 0.0.0.0
+   ▲ Next.js 15.2.1 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://0.0.0.0:3000
+   - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 1564ms
+ ○ Compiling / ...
+ ✓ Compiled / in 19.4s
+ GET / 200 in 22305ms
+(node:117782) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[?25h

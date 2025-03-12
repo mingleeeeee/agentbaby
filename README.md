@@ -1,96 +1,84 @@
-# Monado AI Creator
+# 🧠 Monado + ElizaOS AI Agent Generator
 
-Monado AI Creator is a **React + Next.js** application for designing AI agent profiles. Users can customize an AI entity with descriptions, traits, and knowledge, and also upload an avatar. The system integrates OpenAI API and Twitter authentication details for seamless functionality.
+## 🌐 Overview
 
-## 🚀 Features
+**Monado** (Frontend) + **ElizaOS** (AI Agent Backend System) allow users to generate AI agents and **automatically launch tokens** onchain to support their agents' ecosystems. Tokens are launched following the pump.fun model, enabling a fully integrated AI + Token economy.
 
-- **Customizable AI agent**: Input personality, knowledge, and traits.
-- **Dynamic Avatar Upload**: Upload or use a default image (`mascotImage.webp`).
-- **Organized Input Sections**: Clean layout with categorized text areas.
-- **API & Twitter Integration**: Fields for OpenAI API Key and Twitter credentials.
-- **Fully Responsive UI**: Styled for accessibility and ease of use.
+## ⚙️ Tech Stack
 
----
+- **Next.js** (Monado frontend)
+- **Node.js** & **Typescript** (ElizaOS backend)
+- **Solidity** Smart Contracts (Token launch system)
+- **Hardhat / Ethers.js** (Blockchain interaction)
+- **KuruDex** for listing graduated tokens
 
-## 🛠 Installation
+## 🚀 Key Features
 
-### 1️⃣ Clone the repository
+- AI Agent creation with unique settings (name, avatar, personality, lore, knowledge, topics, etc.)
+- Automatic Token Launch when AI Agent is created (following pump.fun style)
+- Token economy system linked with each AI agent
+- Supporters can purchase tokens to engage with the AI Agent's ecosystem
+- Once token reaches a defined threshold (100%), it will be graduated and listed on **KuruDex**
+
+## 💻 Installation
+
 ```bash
-$ git clone https://github.com/your-repo/monado-ai-creator.git
-$ cd monado-ai-creator
+git clone https://github.com/your-repo/monado.git
+cd monado-frontend
+yarn install
+yarn dev
 ```
 
-### 2️⃣ Install dependencies
-```bash
-$ yarn install  # Or npm install
-```
+## 🏗️ System Structure
 
-### 3️⃣ Start the development server
-```bash
-$ yarn dev  # Or npm run dev
-```
+- **Monado (Frontend)**
+  - AI Agent Creator interface
+  - Automatic on-chain token launch interface
+  - Token progress bar with real-time percentage
 
-The app should now be running at **http://localhost:3000** 🚀
+- **ElizaOS (Backend)**
+  - AI Agents' lifecycle management
+  - Autonomous operation of agents based on defined personality/lore
+  - Handles Twitter posting and other automated actions
 
----
+## 🛠️ Blockchain Components
 
-## 🖼 UI Layout
+- **Token Contract**
+  - Follows pump.fun minting model
+  - Supports price curve for token minting/buying
 
-### **1️⃣ AI Agent Information (Left Column)**
-- **AI Name** (e.g., Monado)
-- **Personality Traits**
-- **Agent Description**
-- **Short Bio**
+- **Bonding/Listing**
+  - Tokens that reach 100% progress are automatically listed on **KuruDex**
 
-### **2️⃣ AI Character Customization (Middle Column)**
-- **Backstory**
-- **Knowledge Base**
-- **Topics of Interest**
-- **Adjectives**
+## ✅ Current System Flow
 
-### **3️⃣ Avatar Upload & Account Settings (Right Column)**
-- **Upload AI Avatar**
-- **OpenAI API Key**
-- **Twitter Email, Username, Password**
+1. **Create AI Agent**
+   - Set AI agent's profile (name, avatar, personality, etc.)
 
----
+2. **Token Launch**
+   - Smart contract auto-mints and launches token paired with the AI agent
 
-## 📸 Default Avatar
-If no image is uploaded, the system will use the default avatar `mascotImage.webp` from the `public/` folder.
+3. **Progress Bar (Community Driven)**
+   - Community can buy tokens to push percentage progress
 
----
+4. **Graduation**
+   - At 100%, the token is listed on KuruDex for open trading
 
-## 🔧 Configuration
-### Environment Variables (Optional)
-You can store API keys and authentication details in a `.env.local` file:
-```env
-NEXT_PUBLIC_OPENAI_API_KEY=your-api-key-here
-NEXT_PUBLIC_TWITTER_EMAIL=your-email-here
-NEXT_PUBLIC_TWITTER_USERNAME=your-username-here
-NEXT_PUBLIC_TWITTER_PASSWORD=your-password-here
-```
+## 🔗 Related Repos / Integrations
+
+- **KuruDex**: Token DEX for trading graduated AI tokens
+- **Pump.fun-inspired Token Contract**
+- **ElizaOS**: AI backend system
+
+## 📈 Example Use Case
+
+- **Creator** makes a unique AI Agent (e.g., "Crypto Cat")
+- **Crypto Cat Token** is automatically launched
+- Fans of "Crypto Cat" buy tokens to support and join the ecosystem
+- If the AI gains enough popularity (tokens reach 100%), **Crypto Cat Token** will be officially listed on **KuruDex**
 
 ---
 
-## 📜 License
-This project is licensed under the **MIT License**.
+**Contact / Community**: [Add your Discord, Telegram, Twitter links]
 
----
-
-## 🤝 Contributing
-Pull requests are welcome! For major changes, please open an issue first to discuss.
-
-1. Fork the project 🍴
-2. Create your feature branch (`git checkout -b feature-branch`)
-3. Commit your changes (`git commit -m 'Add a new feature'`)
-4. Push to the branch (`git push origin feature-branch`)
-5. Open a Pull Request 🚀
-
----
-
-## 🔗 Contact
-For support or collaboration, reach out at **your-email@example.com**.
-
----
-
-🎉 **Enjoy building your AI with Monado AI Creator!**
+> Building the AI-powered, token-driven future.
