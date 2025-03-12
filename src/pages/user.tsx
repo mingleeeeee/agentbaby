@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import Link from "next/link";
-import ProgressBar from '../components/ProgressBar';
-import TwitterFeed from "../components/TwitterFeed"; 
+import ProgressBar from "../components/ProgressBar";
+import TwitterFeed from "../components/TwitterFeed";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useReadTokenInfoData } from "@/blockchain/useReadTokenInfo";
@@ -25,6 +25,9 @@ import { Abi } from "viem";
 import { useTokenAllowance } from "@/blockchain/useTokenAllowance";
 
 export default function UserPage() {
+  const [tempTokenId, setTempTokenId] = useState<number>(1);
+  const [tokenId, setTokenId] = useState<number>(1);
+
   const { address, isConnected } = useAccount();
   const [mounted, setMounted] = useState(false);
 
@@ -35,7 +38,7 @@ export default function UserPage() {
   const avatarUrl = "/mascotImage.webp"; // Default avatar image
   const [inputAmount, setInputAmount] = useState<number>(0);
 
-  const { tokenInfoList, isLoading } = useReadTokenInfoData();
+  const { tokenInfoList, isLoading } = useReadTokenInfoData(tokenId);
 
   const { nativeReserve } = useGetPairReserves(
     tokenInfoList && tokenInfoList.length > 0 && tokenInfoList[0]?.data
@@ -61,10 +64,17 @@ export default function UserPage() {
     address as `0x${string}`
   );
 
+  const handleTokenIdChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setTempTokenId(Number(e.target.value));
+  };
+
+  const handleFetchTokenInfo = () => {
+    setTokenId(tempTokenId);
+  };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputAmount(Number(e.target.value));
   };
-
 
   const handleBuy = async () => {
     // alert("Buy button clicked");
@@ -116,6 +126,17 @@ export default function UserPage() {
       className="main-container"
       style={{ display: "flex", gap: "30px", justifyContent: "center" }}
     >
+      <div className="input-wrapper">
+        <input
+          type="text"
+          className="input-token-info"
+          placeholder="Enter Token ID"
+          value={tempTokenId}
+          onChange={handleTokenIdChange}
+        />
+        <button onClick={handleFetchTokenInfo}>Fetch Token Info</button>
+      </div>
+
       {/* ✅ Left Section */}
       <div className="avatar-container">
         {/* Avatar - Circular */}
@@ -211,16 +232,22 @@ export default function UserPage() {
 
       {/* ✅ Right Twitter Section */}
 
-      <div className="avatar-container" style={{ justifyContent: 'flex-start', alignItems: 'flex-start', padding: '20px' }}>
-
-  <TwitterFeed /> {/* ✅ 渲染推文 */}
-  <Link href="/" className="general-btn">Back to AI Start Page</Link>
-
+      <div
+        className="avatar-container"
+        style={{
+          justifyContent: "flex-start",
+          alignItems: "flex-start",
+          padding: "20px",
+        }}
+      >
+        <TwitterFeed /> {/* ✅ 渲染推文 */}
+        <Link href="/" className="general-btn">
+          Back to AI Start Page
+        </Link>
       </div>
-      <div >
+      <div>
         <ConnectWalletButton address={address} isConnected={isConnected} />
       </div>
-      
     </div>
   );
 }

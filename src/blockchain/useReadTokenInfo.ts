@@ -3,7 +3,6 @@ import {
   BONDING_ADDRESS,
   BONDING_CONTRACT_ABI,
   DESIRED_CHAIN_ID,
-  FETCH_TOKEN_ID,
 } from "./cosntant";
 import { formatEther } from "ethers";
 import { RefetchOptions, QueryObserverResult } from "@tanstack/react-query";
@@ -45,12 +44,12 @@ export type RefetchTokenInfoType = (
   >
 >;
 
-export const useReadTokenInfos = () => {
+export const useReadTokenInfos = (tokenId: number) => {
   const result = useReadContract({
     address: BONDING_ADDRESS,
     abi: BONDING_CONTRACT_ABI,
     functionName: "tokenInfos",
-    args: [FETCH_TOKEN_ID],
+    args: [tokenId],
     chainId: DESIRED_CHAIN_ID,
   });
   const configs = [
@@ -127,8 +126,8 @@ export type FinalReadTokenData = {
   description: string;
 };
 
-export function useReadTokenInfoData(): ReturnType {
-  const { data, isLoading, refetchTokenInfo } = useReadTokenInfos();
+export function useReadTokenInfoData(tokenId: number): ReturnType {
+  const { data, isLoading, refetchTokenInfo } = useReadTokenInfos(tokenId);
 
   console.log("data", data);
   const tokenInfoList = useMemo(() => {
