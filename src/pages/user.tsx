@@ -44,7 +44,7 @@ export default function UserPage() {
       : (ZeroAddress as `0x${string}`)
   );
 
-  const { approve, handleApprove } = useApprove();
+  const { handleApprove } = useApprove();
   const { handlePlaceTrade } = usePlaceTrade();
   const { allowance: baseTokenAllowance } = useTokenAllowance(
     BASE_TOKEN_ADDRESS as `0x${string}`,
@@ -52,8 +52,6 @@ export default function UserPage() {
     BASE_TOKEN_CONTRACT_ABI as Abi,
     address as `0x${string}`
   );
-
-  console.log("baseTokenAllowance", baseTokenAllowance);
 
   const { allowance: memeTokenAllowance } = useTokenAllowance(
     tokenInfoList && tokenInfoList.length > 0 && tokenInfoList[0]?.data
@@ -63,8 +61,6 @@ export default function UserPage() {
     FERC20_CONTRACT_ABI as Abi,
     address as `0x${string}`
   );
-
-  console.log("memeTokenAllowance", memeTokenAllowance);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputAmount(Number(e.target.value));
@@ -85,7 +81,6 @@ export default function UserPage() {
     };
     if (mounted) {
       fetchTweets();
-      console.log("aa", tokenInfoList);
     }
   }, [mounted, tokenInfoList]);
 
@@ -98,10 +93,6 @@ export default function UserPage() {
         BASE_TOKEN_CONTRACT_ABI as Abi
       );
     }
-
-    console.log("baseTokenAllowance1", baseTokenAllowance);
-    console.log("MAX_UINT2561", MAX_UINT256);
-    console.log("approve", approve);
 
     await handlePlaceTrade(
       inputAmount,
@@ -193,9 +184,10 @@ export default function UserPage() {
               WMON
             </span>
           </div>
-
           <ProgressBar
-            percentage={Math.round((35000 - Number(nativeReserve)) / 35000)}
+            percentage={
+              Number(((35000 - Number(nativeReserve)) / 35000).toFixed(3)) * 100
+            }
           />
         </div>
 
@@ -203,7 +195,7 @@ export default function UserPage() {
         <div className="swap-container" style={{ marginTop: "20px" }}>
           <div className="swap-options">
             <button className="swap-btn active" onClick={handleBuy}>
-              Buy{" "}
+              Buy
             </button>
             <button className="swap-btn" onClick={handleSell}>
               Sell{" "}
@@ -212,6 +204,14 @@ export default function UserPage() {
 
           <div className="swap-info">
             <span>Swap Fee:</span> <span className="fee">1%</span>
+          </div>
+
+          <div className="swap-info2">
+            <div>Buy: input WMOD amount</div>
+          </div>
+
+          <div className="swap-info2">
+            <div>Sell: input fun Token amount</div>
           </div>
 
           <div className="swap-input-wrapper">

@@ -325,6 +325,15 @@ button:hover {
   width: 100%;
 }
 
+.swap-info2 {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #5a4a42;
+  width: 100%;
+}
+
 .fee {
   color: #8a6d5e;
   margin-left: 5px;

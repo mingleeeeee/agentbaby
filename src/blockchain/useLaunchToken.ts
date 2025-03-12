@@ -13,14 +13,14 @@ export const LAUNCH_TOKEN_EVENT_ABI = [
 
 export const useLaunchToken = () => {
   const launchToken = useWriteContract();
-  const handleLaunchToken = (
+  const handleLaunchToken = async (
     name: string,
     ticker: string,
     description: string,
     imageUrl: string,
     urls: [string, string, string, string]
   ) => {
-    launchToken.writeContract({
+    launchToken.writeContractAsync({
       address: BONDING_ADDRESS,
       abi: BONDING_CONTRACT_ABI,
       functionName: "launch",
