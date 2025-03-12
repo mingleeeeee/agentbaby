@@ -1,5 +1,7 @@
 import "../styles/globals.css";
-import ProgressBar from "../components/ProgressBar";
+
+import ProgressBar from '../components/ProgressBar';
+import TwitterFeed from "../components/TwitterFeed"; 
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useReadTokenInfoData } from "@/blockchain/useReadTokenInfo";
@@ -228,65 +230,12 @@ export default function UserPage() {
       </div>
 
       {/* ✅ Right Twitter Section */}
-      <div
-        className="avatar-container"
-        style={{
-          justifyContent: "flex-start",
-          alignItems: "flex-start",
-          padding: "20px",
-        }}
-      >
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-            gap: "16px",
-          }}
-        >
-          <h3
-            style={{
-              color: "#5a4a42",
-              fontSize: "18px",
-              marginBottom: "12px",
-              fontWeight: "bold",
-            }}
-          >
-            Latest Posts
-          </h3>
 
-          {loading && (
-            <p style={{ color: "#8a6d5e", fontStyle: "italic" }}>Loading...</p>
-          )}
+      <div className="avatar-container" style={{ justifyContent: 'flex-start', alignItems: 'flex-start', padding: '20px' }}>
 
-          {!loading && tweets.length === 0 && (
-            <p style={{ color: "#8a6d5e", fontStyle: "italic" }}>
-              No posts found.
-            </p>
-          )}
+  <TwitterFeed /> {/* ✅ 渲染推文 */}
 
-          {tweets.map((tweet, index) => (
-            <div
-              key={index}
-              style={{
-                background: "#fffaf0",
-                padding: "16px",
-                borderRadius: "12px",
-                boxShadow: "0 4px 8px rgba(90, 74, 66, 0.1)",
-                color: "#5a4a42",
-                display: "flex",
-                flexDirection: "column",
-                gap: "8px",
-                wordBreak: "break-word",
-              }}
-            >
-              <p style={{ margin: 0 }}>{tweet.text}</p>
-              <small style={{ color: "#8a6d5e", fontSize: "12px" }}>
-                {new Date(tweet.created_at).toLocaleString()}
-              </small>
-            </div>
-          ))}
-        </div>
+
       </div>
       <div>
         <ConnectWalletButton address={address} isConnected={isConnected} />
