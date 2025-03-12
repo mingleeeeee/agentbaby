@@ -1,0 +1,22 @@
+/* ✅ Metamask Connect Button */
+.connect-wallet-btn {
+    background: #f2e4d5; /* 和 input 相同色 */
+    color: #5a4a42; /* 主色 */
+    border: 2px solid #c2a98f;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(90, 74, 66, 0.2);
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .connect-wallet-btn:hover {
+    background: #d4b18f; /* Hover 焦糖 */
+    color: white;
+  }

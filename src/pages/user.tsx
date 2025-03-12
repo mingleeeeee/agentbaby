@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-
+import Link from "next/link";
 import ProgressBar from '../components/ProgressBar';
 import TwitterFeed from "../components/TwitterFeed"; 
 import { useState, useEffect } from "react";
@@ -33,9 +33,6 @@ export default function UserPage() {
   }, []);
 
   const avatarUrl = "/mascotImage.webp"; // Default avatar image
-
-  const [tweets, setTweets] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
   const [inputAmount, setInputAmount] = useState<number>(0);
 
   const { tokenInfoList, isLoading } = useReadTokenInfoData();
@@ -68,23 +65,6 @@ export default function UserPage() {
     setInputAmount(Number(e.target.value));
   };
 
-  // Fetch Twitter posts when component loads
-  useEffect(() => {
-    const fetchTweets = async () => {
-      try {
-        const res = await fetch("/api/twitter"); // Backend API to get tweets
-        const data = await res.json();
-        setTweets(data.tweets || []);
-      } catch (error) {
-        console.error("Error fetching tweets", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    if (mounted) {
-      fetchTweets();
-    }
-  }, [mounted, tokenInfoList]);
 
   const handleBuy = async () => {
     // alert("Buy button clicked");
@@ -234,12 +214,13 @@ export default function UserPage() {
       <div className="avatar-container" style={{ justifyContent: 'flex-start', alignItems: 'flex-start', padding: '20px' }}>
 
   <TwitterFeed /> {/* ✅ 渲染推文 */}
-
+  <Link href="/" className="general-btn">Back to AI Start Page</Link>
 
       </div>
-      <div>
+      <div >
         <ConnectWalletButton address={address} isConnected={isConnected} />
       </div>
+      
     </div>
   );
 }

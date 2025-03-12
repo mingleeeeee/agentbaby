@@ -1,4 +1,5 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
+import Link from "next/link";
 import "../styles/globals.css"; // ✅ Ensure CSS is included
 import { ConnectWalletButton } from "@shared-components/atom/buttons/ConnectWalletButton";
 import { useAccount } from "wagmi";
@@ -8,7 +9,7 @@ import {
   BASE_TOKEN_ADDRESS,
   BASE_TOKEN_CONTRACT_ABI,
   BONDING_ADDRESS,
-  FROUTER_ADDRESS,
+  //FROUTER_ADDRESS,
   MAX_UINT256,
 } from "@/blockchain/cosntant";
 import { Abi } from "viem";
@@ -44,50 +45,25 @@ export default function Home() {
 
   const [loading, setLoading] = useState(false);
   const [isRunning, setIsRunning] = useState(false);
-  const fileInputRef = useRef<HTMLInputElement | null>(null);
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // Default avatar
   useEffect(() => {
-    if (!character.avatar && mounted) {
+    setMounted(true); // ✅ 畫面載入完成
+  
+    // ✅ 預設 Avatar
+    if (!character.avatar) {
       setCharacter((prev) => ({ ...prev, avatar: defaultAvatar }));
     }
-  }, [character.avatar, mounted]);
+  
+    // ✅ 讀取 AI 啟動狀態
+    const runningStatus = localStorage.getItem("isRunning");
+    setIsRunning(runningStatus === "true"); // 轉換為 boolean
+  }, [character.avatar]);
+  
+  
 
-  // Trigger file selection on avatar click
-  const handleAvatarClick = () => {
-    fileInputRef.current?.click();
-  };
-
-  // Handle image upload and preview
-  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (!e.target.files || e.target.files.length === 0) return;
-
-    const file = e.target.files[0];
-    const formData = new FormData();
-    formData.append("file", file);
-
-    try {
-      const response = await fetch("/api/upload", {
-        method: "POST",
-        body: formData,
-      });
-
-      if (!response.ok) {
-        console.error("Image upload failed:", await response.text());
-        return;
-      }
-
-      const result = await response.json();
-      console.log("Image uploaded successfully:", result.url);
-
-      setCharacter((prev) => ({ ...prev, avatar: result.url }));
-    } catch (error) {
-      console.error("Image upload error:", error);
-    }
-  };
 
   // Handle input changes
   const handleChange = (
@@ -96,18 +72,65 @@ export default function Home() {
     setCharacter({ ...character, [e.target.name]: e.target.value });
   };
 
-  // Start AI Agent
+  // // Start AI Agent
+  // const startAI = async () => {
+  //   const ticker = "AI fun " + character.name;
+
+  //   if (allowance !== MAX_UINT256) {
+  //     handleApprove(
+  //       BASE_TOKEN_ADDRESS as `0x${string}`,
+  //       BONDING_ADDRESS as `0x${string}`,
+  //       BASE_TOKEN_CONTRACT_ABI as Abi
+  //     );
+  //   }
+
+  //   await handleLaunchToken(
+  //     character.name,
+  //     ticker,
+  //     character.description,
+  //     character.avatar,
+  //     ["", "", "", ""]
+  //   );
+
+  //   setLoading(true);
+  //   const response = await fetch("/api/start", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify({ character }),
+  //   });
+
+  //   const result = await response.json();
+  //   alert(result.message);
+  //   setIsRunning(true);
+  //   setLoading(false);
+  // };
+  // Start AI
+
+  // // Stop AI Agent
+  // const stopAI = async () => {
+  //   setLoading(true);
+  //   const response = await fetch("/api/stop", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //   });
+
+  //   const result = await response.json();
+  //   alert(result.message);
+  //   setIsRunning(false);
+  //   setLoading(false);
+  // };
+
   const startAI = async () => {
     const ticker = "AI fun " + character.name;
-
+  
     if (allowance !== MAX_UINT256) {
-      handleApprove(
+      await handleApprove(
         BASE_TOKEN_ADDRESS as `0x${string}`,
-        FROUTER_ADDRESS as `0x${string}`,
+        BONDING_ADDRESS as `0x${string}`,
         BASE_TOKEN_CONTRACT_ABI as Abi
       );
     }
-
+  
     await handleLaunchToken(
       character.name,
       ticker,
@@ -115,48 +138,34 @@ export default function Home() {
       character.avatar,
       ["", "", "", ""]
     );
-
+  
     setLoading(true);
     const response = await fetch("/api/start", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ character }),
     });
-
+  
     const result = await response.json();
     alert(result.message);
     setIsRunning(true);
+    localStorage.setItem("isRunning", "true"); // ✅ 存入啟動狀態
     setLoading(false);
   };
-
-  // Stop AI Agent
+  
+  // Stop AI
   const stopAI = async () => {
     setLoading(true);
     const response = await fetch("/api/stop", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
     });
-
+  
     const result = await response.json();
     alert(result.message);
     setIsRunning(false);
+    localStorage.setItem("isRunning", "false"); // ✅ 存入關閉狀態
     setLoading(false);
-  };
-
-  const handleConnectWallet = async () => {
-    if (typeof window.ethereum !== "undefined") {
-      try {
-        const accounts = await window.ethereum.request({
-          method: "eth_requestAccounts",
-        });
-        console.log("Connected account:", accounts[0]);
-        alert(`Connected: ${accounts[0]}`);
-      } catch (error) {
-        console.error("User rejected connection", error);
-      }
-    } else {
-      alert("Metamask not found. Please install Metamask.");
-    }
   };
 
   if (!mounted) {
@@ -248,10 +257,13 @@ export default function Home() {
         <button onClick={isRunning ? stopAI : startAI} disabled={loading}>
           {loading ? "Processing..." : isRunning ? "Stop AI" : "Start AI"}
         </button>
+        <Link href="user" className="general-btn">View User Page</Link>
       </div>
       <div>
         <ConnectWalletButton address={address} isConnected={isConnected} />
       </div>
+      
+      
     </div>
   );
 }

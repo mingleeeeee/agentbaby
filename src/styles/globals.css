@@ -137,7 +137,7 @@ textarea::placeholder {
 }
 
 
-/* ✅ 按鈕 */
+/* ✅ 按鈕
 button {
   background: #d5a67e;
   color: white;
@@ -153,7 +153,7 @@ button {
 
 button:hover {
   background: #b88665;
-}
+} */
 
 /* ✅ AI 卡片統一風格 */
 .ai-card {
@@ -483,4 +483,52 @@ button:hover {
   max-height: 1000px; /* ✅ 你想要的固定高度，可以自由調整 */
   overflow-y: auto; /* ✅ 垂直方向超出時顯示滾動條 */
   padding-right: 8px; /* ✅ 滾動條不擋住內容 */
+}
+
+/* ✅ General Compact Button */
+.general-btn {
+  background: #f2e4d5; /* 和 input 相同色 */
+  color: #5a4a42; /* 主色 */
+  border: 2px solid #c2a98f;
+  border-radius: 6px; /* 和系統整體一致 */
+  padding: 10px 16px; /* 適中 padding */
+  font-size: 16px; /* 適中字體 */
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 12px; /* 一點距離 */
+  width: 91.5%; /* 與其他按鈕相同 */
+  max-width: 500px; /* 保持一致 */
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(90, 74, 66, 0.2); /* 微陰影 */
+  transition: background 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+.general-btn:hover {
+  background: #d4b18f; /* Hover 焦糖 */
+  color: white;
+}
+
+/* ✅ General Compact Button */
+button {
+  background: #d5a67e; /* 和 input 相同色 */
+  color: #5a4a42; /* 主色 */
+  border: 2px solid #c2a98f;
+  border-radius: 6px; /* 和系統整體一致 */
+  padding: 10px 16px; /* 適中 padding */
+  font-size: 16px; /* 適中字體 */
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 12px; /* 一點距離 */
+  width: 100%; /* 與其他按鈕相同 */
+  max-width: 500px; /* 保持一致 */
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(90, 74, 66, 0.2); /* 微陰影 */
+  transition: background 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+button:hover {
+  background: #b88665; /* Hover 焦糖 */
+  color: white;
 }
