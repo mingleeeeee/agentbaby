@@ -148,6 +148,8 @@ export function useReadTokenInfoData(tokenId: number): ReturnType {
           };
         }
 
+        console.log("tokenData", res);
+
         return {
           status: "success" as Status,
           data: tokenData
@@ -167,7 +169,7 @@ export function useReadTokenInfoData(tokenId: number): ReturnType {
                 liquidity: tokenData.liquidity,
                 volume: tokenData.volume,
                 volume24H: tokenData.volume24H,
-                description: res[6],
+                description: res[5],
               }
             : null,
         };

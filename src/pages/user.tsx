@@ -91,8 +91,6 @@ export default function UserPage() {
       tokenInfoList[0].data?.token as `0x${string}`,
       "buy"
     );
-
-    console.log("handleBuy", inputAmount);
   };
 
   const handleSell = async () => {
@@ -105,9 +103,6 @@ export default function UserPage() {
       );
     }
 
-    console.log("memeTokenAllowance2", memeTokenAllowance);
-    console.log("MAX_UINT2562", MAX_UINT256);
-
     await handlePlaceTrade(
       inputAmount,
       tokenInfoList[0].data?.token as `0x${string}`,
@@ -118,8 +113,6 @@ export default function UserPage() {
   if (!mounted || isLoading) {
     return <div>Loading...</div>;
   }
-
-  console.log("nativeReserve", nativeReserve);
 
   return (
     <div
@@ -159,9 +152,7 @@ export default function UserPage() {
                 : ZeroAddress}
             </a>
           </div>
-
           <hr className="divider" />
-
           <h2 className="ai-name">{tokenInfoList[0].data?.name}</h2>
           <p className="ai-address">
             {tokenInfoList[0].data?.agentToken ===
@@ -169,14 +160,12 @@ export default function UserPage() {
               ? tokenInfoList[0].data?.token
               : tokenInfoList[0].data?.agentToken}
           </p>
-
           <div className="description">
             <span className="label">Description:</span>
             <span className="desc-text">
               {tokenInfoList[0].data?.description}
             </span>
           </div>
-
           <div className="price">
             <span className="label">Price:</span>
             <span className="price-value">
@@ -189,7 +178,7 @@ export default function UserPage() {
           </div>
           <ProgressBar
             percentage={
-              Number(((35000 - Number(nativeReserve)) / 35000).toFixed(3)) * 100
+              Number((Number(nativeReserve) / 35000).toFixed(3)) * 100
             }
           />
         </div>
