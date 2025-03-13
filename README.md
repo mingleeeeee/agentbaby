@@ -1,12 +1,12 @@
-# 🧠 Monado + ElizaOS AI Agent Generator
+# 🧠 Agentbaby + ElizaOS AI Agent Generator
 
 ## 🌐 Overview
 
-**Monado** (Frontend) + **ElizaOS** (AI Agent Backend System) allow users to generate AI agents and **automatically launch tokens** onchain to support their agents' ecosystems. Tokens are launched following the pump.fun model, enabling a fully integrated AI + Token economy.
+**agentbaby** (Frontend) + **ElizaOS** (AI Agent Backend System) allow users to generate AI agents and **automatically launch tokens** onchain to support their agents' ecosystems. Tokens are launched following the pump.fun model, enabling a fully integrated AI + Token economy.
 
 ## ⚙️ Tech Stack
 
-- **Next.js** (Monado frontend)
+- **Next.js** (agentbaby frontend)
 - **Node.js** & **Typescript** (ElizaOS backend)
 - **Solidity** Smart Contracts (Token launch system)
 - **Hardhat / Ethers.js** (Blockchain interaction)
@@ -23,15 +23,15 @@
 ## 💻 Installation
 
 ```bash
-git clone https://github.com/your-repo/monado.git
-cd monado-frontend
+git clone https://github.com/mingleeeeee/agentbaby.git
+cd agentbaby
 yarn install
 yarn dev
 ```
 
 ## 🏗️ System Structure
 
-- **Monado (Frontend)**
+- **agentbaby (Frontend)**
   - AI Agent Creator interface
   - Automatic on-chain token launch interface
   - Token progress bar with real-time percentage
@@ -79,9 +79,9 @@ yarn dev
 
 ### 🤖 What is ElizaOS?
 
-[ElizaOS](https://github.com/elizaOS/eliza) is the **backend AI engine** that powers the AI agents created through the Monado frontend. It manages the **lifecycle, actions, and autonomous behavior** of AI agents.
+[ElizaOS](https://github.com/elizaOS/eliza) is the **backend AI engine** that powers the AI agents created through the agentbaby frontend. It manages the **lifecycle, actions, and autonomous behavior** of AI agents.
 
-Once an agent is created via Monado, ElizaOS runs the agent as a **real-time autonomous AI character**, capable of tasks like **posting on Twitter**, interacting with users, and following its designed personality and lore.
+Once an agent is created via agentbaby, ElizaOS runs the agent as a **real-time autonomous AI character**, capable of tasks like **posting on Twitter**, interacting with users, and following its designed personality and lore.
 
 ---
 
